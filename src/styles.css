@@ -304,7 +304,7 @@ a, button {
     background-color: #0576BE;
     position: absolute;
     bottom: -2px;
-    z-index: 4;
+    /* z-index: 4; */
     left: 0;
 }
 
