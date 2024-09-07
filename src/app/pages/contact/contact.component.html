@@ -1,0 +1,76 @@
+<div class="container contact">
+  <div class="contact-info">
+    <div class="contact-left">
+      <div class="addresses">
+        <div class="misamartebi">
+          <p class="heading-secondary">მისამართები</p>
+          <p class="text">სამუშაო საათები, ორშაბათი-პარასკევი: 09:00 - 18:00</p>
+        </div>
+
+        <p class="little-text">
+          მთაწმინდის რაიონი - მედია (მზია) ჯუღელის ქუჩა N10
+        </p>
+        <p class="little-text">ისნის რაიონი - შუამთის ქ. N10ბ</p>
+        <p class="little-text">გლდანის რაიონი - აკაკი ვასაძის ქ. N12</p>
+        <p class="little-text">რუსთავი - წმინდა ნინოს ქ. N15</p>
+        <p class="little-text">მცხეთა - დავით აღმაშენებლის ქ. N27</p>
+      </div>
+
+      <div class="contact-us">
+        <p class="heading-secondary">დაგვიკავშირდით</p>
+
+        <div class="contact-items">
+          <div class="contact-item">
+            <img src="assets/images/icons/phone.png" />
+            <a href="callto:+9950322222525">32 222 25 25</a>
+          </div>
+          <div class="contact-item">
+            <img src="assets/images/icons/message.png" />
+            <a href="mailto:online@gwp.ge">online&#64;gwp.ge</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form">
+      <p class="heading-secondary">მოგვწერე</p>
+      <div class="form-row">
+        <div class="form-item">
+          <label class="little-text">მობილურის ნომერი</label>
+          <input type="text" class="contact-input" />
+        </div>
+        <div class="form-item">
+          <label class="little-text">სახელი</label>
+          <input type="text" class="contact-input" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-item">
+          <label class="little-text">ელ-ფოსტა</label>
+          <input type="mail" class="contact-input" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-item">
+          <label class="little-text">შეტყობინება</label>
+          <textarea class="contact-input textarea"></textarea>
+        </div>
+      </div>
+      <button type="button" (click)="openSmsPopop()" class="send-form">
+        შეტყობინების გაგზავნა
+      </button>
+    </form>
+  </div>
+
+  <div class="contact-map">
+    <p class="heading-secondary">გვიპოვე რუკაზე</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26727.164067533286!2d44.8221526631529!3d41.755042705537065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446d19dc716bdd%3A0xe16eed433b47314f!2sGWP%20Training%20Center!5e0!3m2!1sen!2sge!4v1724654537473!5m2!1sen!2sge"
+      width="1275"
+      height="377"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>

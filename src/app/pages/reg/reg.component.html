@@ -1,0 +1,68 @@
+<div class="container signup-wrap mt-32">
+  <div class="signup-headings">
+    <h2 class="signup-title">მომხმარებლის რეგისტრაცია</h2>
+    <p class="text-primary mt-8">
+      დარეგისტრირდი და ისარგებლე GWP-ის პერსონალური კაბინეტით, გაიგე ყველა საჭირო
+      ინფორმაცია ციფრულად.
+    </p>
+  </div>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" id="login-form">
+    <div class="form-groups-wrap">
+      <div class="form-group mt-24">
+        <label>სახელი</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="მიუთითეთ სახელი" />
+      </div>
+      <div class="form-group mt-24">
+        <label>გვარი</label>
+        <input type="text" class="form-control" formControlName="surname" placeholder="მიუთითეთ გვარი" />
+      </div>
+    </div>
+    <div class="form-groups-wrap">
+      <div class="form-group mt-24">
+        <label>პირადი ნომერი</label>
+        <input type="text" class="form-control" formControlName="personalNumber" placeholder="მიუთითეთ პირადი ნომერი" />
+      </div>
+      <div class="form-group mt-24">
+        <label>აბონენტის ნომერი</label>
+        <input type="text" class="form-control" formControlName="abonentNumber" placeholder="მიუთითეთ აბონენტის ნომერი" />
+      </div>
+    </div>
+    <div class="form-groups-wrap">
+      <div class="form-group mt-24">
+        <label>მობილურის ნომერი</label>
+        <input type="tel" class="form-control" formControlName="mobileNumber" placeholder="მიუთითეთ მობილურის ნომერი" />
+      </div>
+      <div class="form-group mt-24">
+        <label>ელ.ფოსტა</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="მიუთითეთ ელ.ფოსტა" />
+      </div>
+    </div>
+    <div class="form-groups-wrap">
+      <div class="form-group mt-24">
+        <label>პაროლი</label>
+        <input type="password" class="form-control" formControlName="password" placeholder="მიუთითეთ პაროლი" />
+      </div>
+      <div class="form-group mt-24">
+        <label>გაიმეორეთ პაროლი</label>
+        <input type="password" class="form-control" formControlName="confirmPassword" placeholder="გაიმეორეთ პაროლი" />
+      </div>
+    </div>
+
+    <div class="signup-bottom-form mt-24">
+      <div class="sign-up-chackboxs">
+        <div class="sign-up-chackbox">
+          <input type="checkbox" id="terms" formControlName="termsAccepted" />
+          <label for="terms">ვეთანხმები <a href="#">წესებს და პირობებს</a></label>
+        </div>
+        <div class="sign-up-chackbox">
+          <input type="checkbox" id="privacy" formControlName="privacyAccepted" />
+          <label for="privacy">კონფიდენციალობის პირობები/მონაცემთა დაცვა</label>
+        </div>
+      </div>
+
+      <button [disabled]="signupForm.invalid" type="submit" class="btn-primary">
+        რეგისტრაცია
+      </button>
+    </div>
+  </form>
+</div>

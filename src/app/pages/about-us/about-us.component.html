@@ -1,0 +1,242 @@
+<div class="container">
+    <div class="topside-header">
+        <ul class="topside-nav-links">
+            <li class="topside-nav-item active" [ngClass]="{'active': openedTab == tabs.Work}"
+                (click)="openedTab = tabs.Work"><a data-content="content1" data-layout="flex">საქმიანობა</a></li>
+            <li class="topside-nav-item" [ngClass]="{'active': openedTab == tabs.Management}"
+                (click)="openedTab = tabs.Management"><a class="text" data-content="content2"
+                    data-layout="grid">მენეჯმენტი</a>
+            </li>
+            <li class="topside-nav-item" [ngClass]="{'active': openedTab == tabs.Quality}"
+                (click)="openedTab = tabs.Quality"><a class="text" data-content="content3" data-layout="flex">ხარისხის
+                    მართვა</a></li>
+            <li class="topside-nav-item" [ngClass]="{'active': openedTab == tabs.Water}"
+                (click)="openedTab = tabs.Water"><a class="text" data-content="content4"
+                    data-layout="flex">წყალმომარაგება</a>
+            </li>
+            <li class="topside-nav-item" [ngClass]="{'active': openedTab == tabs.Social}"
+                (click)="openedTab = tabs.Social"><a class="text" data-content="content5" data-layout="flex">სოციალური
+                    პასუხისმგებლობა</a></li>
+            <li class="topside-nav-item" [ngClass]="{'active': openedTab == tabs.Tariff}"
+                (click)="openedTab = tabs.Tariff"><a class="text" data-content="content6">ტარიფი</a></li>
+        </ul>
+    </div>
+
+    <div class="innerpage-container">
+        <div id="content1" *ngIf="openedTab == tabs.Work" [ngClass]="{'active': openedTab == tabs.Work}"
+            class="content flex-container">
+            <div class="innerpage-text-wrapper">
+                <div class="heading-secondary">საქმიანობა</div>
+                <div class="innerpage-text-container">
+                    <p class="text-primary">ჯორჯიან უოთერ ენდ ფაუერი წყლის რესურსებს ეკოლოგიურად სუფთა და მდგრადი გზით
+                        მოიპოვებს, ქმნის სასიცოცხლოდ მნიშვნელოვან პროდუქტს – მაღალი ხარისხის სასმელ წყალს, ახდენს მის
+                        ტრანსპორტირებასა და მომხმარებლისთვის მიწოდებას. კომპანია ასევე
+                        წყალარინების მომსახურებას ეწევა და მოხმარებული წყლის გატანას საკანალიზაციო ქსელების
+                        მეშვეობით უზრუნველყოფს.
+                    </p>
+                    <p class="text-primary">
+                        ჯორჯიან უოთერ ენდ ფაუერი ენერგეტიკის მიმართულებითაც საქმიანობს. ელექტროენერგიის წარმოება
+                        ჟინვალჰესზე, თეთრიხევიჰესზე და ბოდორნაჰესზე ხდება. ჰესები საქართველოს ერთიან ელექტროსისტემაშია
+                        ჩართული, გამომუშავებული ელექტროენერგია წყალმომარაგების ობიექტების ფუნქციონირებას
+                        ხმარდება.
+                    </p>
+                </div>
+            </div>
+
+            <img src="assets/images/about/saqmianoba.png">
+        </div>
+        <div id="content2" *ngIf="openedTab == tabs.Management" class="content grid grid-container">
+            <div *ngFor="let item of managementItems; index as i" class="managment-item" (click)="openDialog(item, i)">
+                <img [src]="item.imgSrc" alt="{{item.name}}">
+                <div class="managment-text">
+                    <p class="managment-name">{{item.name}}</p>
+                    <p class="managment-title">{{item.title}}</p>
+                </div>
+            </div>
+        </div>
+        <div id="content3" *ngIf="openedTab == tabs.Quality" [ngClass]="{'active': openedTab == tabs.Quality}"
+            class="content">
+            <div class="innerpage-text-wrapper">
+                <div class="heading-secondary">ხარისხის მართვა</div>
+                <div class="innerpage-text-container">
+                    <p class="text-primary">ჯორჯიან უოთერ ენდ ფაუერის მართვა საერთაშორისო სტანდარტების მიხედვით
+                        ხორციელდება. კომპანიამ ხარისხის მართვის საერთაშორისო სისტემის ISO-9001 სტანდარტის შესაბამისი
+                        სერთიფიკატი 2006 წელს მიიღო.
+                    </p>
+                    <p class="text-primary">
+                        ხარისხის მართვის სერთიფიკატის მოპოვება და მისი მოთხოვნების დანერგვა კომპანიას ავალდებულებს
+                        მუდმივად იყოს ორიენტირებული მომსახურების გაუმჯობესებაზე, წარმოების ეფექტურობის ზრდაზე, ტექნიკური
+                        და ტექნოლოგიური ოპერაციების წარმართვის მკაფიოდ რეგლამენტირებასა
+                        და კომპანიის პერსონალის მოტივირებულ ქმედებებზე.
+                    </p>
+
+                    <p class="text-primary">
+                        ხარისხის მართვის სერთიფიკატის შენარჩუნება ეფუძნება კომპანიის საქმიანობის მუდმივ მონიტორინგს. ამ
+                        მიმართულებით ჯორჯიან უოთერ ენდ ფაუერი აგრძელებს მნიშვნელოვანი პროექტების და სარეაბილიტაციო
+                        სამუშაოების განხორციელებას თბილისისა და ქალაქ მცხეთის მოსახლეობის
+                        მაღალი ხარისხის სასმელი წყლით სტაბილურად უზრუნველყოფის მიზნით.
+                    </p>
+                </div>
+            </div>
+            <img src="assets/images/about/xarisxismartva.png">
+        </div>
+        <div id="content4" *ngIf="openedTab == tabs.Water" [ngClass]="{'active': openedTab == tabs.Water}"
+            class="content" style="flex-direction: column; gap: 32px;">
+            <div class="flex-1">
+                <div class="innerpage-text-wrapper">
+                    <div class="heading-secondary">წყალმომარაგება</div>
+                    <div class="innerpage-text-container">
+                        <p class="text-primary">სასმელი წყალი ყოველდღიური მოხმარების სასიცოცხლო მნიშვნელობის პროდუქტია,
+                            რომლის შექმნა-დამუშავება და მომხმარებლამდე მიწოდება კომპლექსური პროცესია.
+                        </p>
+                        <p class="text-primary">
+                            დედაქალაქის წყალმომარაგება ოთხ ძირითად საფეხურს გადის: წყალაღება, წყლის ხარისხის
+                            სტანდარტამდე დაყვანა, წყლის ტრანსპორტირება, მომხმარებლებზე განაწილება.
+                        </p>
+
+                        <p class="text-primary">
+                            არსებობს წყალმომარაგების ორი ტიპის წყარო - მიწისქვეშა და ზედაპირული. ნედლი წყლის ხარისხის
+                            გამო პრიორიტეტულია მიწისქვეშა წყალაღება.თბილისის წყალმომარაგების სისტემაში ორივე ტიპის
+                            წყალაღება გამოიყენება. მიწისქვეშა წყლების მოპოვება ხდება მდინარე არაგვის ხეობაში,
+                            ხოლო ზედაპირული წყალაღება ხორციელდება მდინარე არაგვიდან, მათ შორის ჟინვალის წყალსაცავიდან და
+                            ნაწილობრივ თბილისის ზღვიდან, ღრმაღელესა და სამგორის სათავე ნაგებობების საშუალებით.
+                        </p>
+
+                        <p class="text-primary">
+                            წყლის ხარისხის სტანდარტამდე დაყვანის შემდეგ ხდება მისი ტრასპორტირება და დაგროვება
+                            სარეგულაციო რეზერვუარებში. დედაქალაქის ტერიტორიაზე განთავსებულია 300 000 მ2 ტევადობის
+                            რეზერვუარები, მძლავრი სატუმბო სადგურები, ადგილობრივი წნევის მარეგულირებელი სადგურები
+                            და წნევის რეგულატორები, რომელთა საშუალებით, თბილისის მასშტაბით, სასმელი წყლის ნაკადებისა და
+                            წყლის წნევის რეგულირება ხდება.
+                        </p>
+                    </div>
+                </div>
+
+                <img src="assets/images/about/wkalmomarageba-1.png">
+            </div>
+
+            <div class="flex-1">
+                <div class="innerpage-text-wrapper">
+                    <div class="innerpage-text-container">
+                        <p class="text-primary">სასმელი წყალი ყოველდღიური მოხმარების სასიცოცხლო მნიშვნელობის პროდუქტია,
+                            რომლის შექმნა-დამუშავება და მომხმარებლამდე მიწოდება კომპლექსური პროცესია.
+                        </p>
+                        <p class="text-primary">
+                            დედაქალაქის წყალმომარაგება ოთხ ძირითად საფეხურს გადის: წყალაღება, წყლის ხარისხის
+                            სტანდარტამდე დაყვანა, წყლის ტრანსპორტირება, მომხმარებლებზე განაწილება.
+                        </p>
+
+                        <p class="text-primary">
+                            არსებობს წყალმომარაგების ორი ტიპის წყარო - მიწისქვეშა და ზედაპირული. ნედლი წყლის ხარისხის
+                            გამო პრიორიტეტულია მიწისქვეშა წყალაღება.თბილისის წყალმომარაგების სისტემაში ორივე ტიპის
+                            წყალაღება გამოიყენება. მიწისქვეშა წყლების მოპოვება ხდება მდინარე არაგვის ხეობაში,
+                            ხოლო ზედაპირული წყალაღება ხორციელდება მდინარე არაგვიდან, მათ შორის ჟინვალის წყალსაცავიდან და
+                            ნაწილობრივ თბილისის ზღვიდან, ღრმაღელესა და სამგორის სათავე ნაგებობების საშუალებით.
+                        </p>
+
+                        <p class="text-primary">
+                            წყლის ხარისხის სტანდარტამდე დაყვანის შემდეგ ხდება მისი ტრასპორტირება და დაგროვება
+                            სარეგულაციო რეზერვუარებში. დედაქალაქის ტერიტორიაზე განთავსებულია 300 000 მ2 ტევადობის
+                            რეზერვუარები, მძლავრი სატუმბო სადგურები, ადგილობრივი წნევის მარეგულირებელი სადგურები
+                            და წნევის რეგულატორები, რომელთა საშუალებით, თბილისის მასშტაბით, სასმელი წყლის ნაკადებისა და
+                            წყლის წნევის რეგულირება ხდება.
+                        </p>
+                    </div>
+                </div>
+
+                <img src="assets/images/about/wkalmomarageba-2.png">
+            </div>
+        </div>
+        <div id="content5" *ngIf="openedTab == tabs.Social" [ngClass]="{'active': openedTab == tabs.Social}"
+            class="content">
+            <div class="innerpage-text-wrapper">
+                <div class="heading-secondary">სოციალური პასუხისმგებლობა</div>
+                <div class="innerpage-text-container">
+                    <p class="text-primary">უპირველესი სოციალური პასუხისმგებლობა, რომელიც ჯორჯიან უოთერ ენდ ფაუერის
+                        ძირითად საქმიანობას უკავშირდება, თბილისისა და ქალაქ მცხეთის მოსახლეობის, სახელმწიფო
+                        დაწესებულებების, სამრეწველო და კომერციული ობიექტების მაღალი ხარისხის სასმელი
+                        წყლით უზრუნველყოფა და მათი სტაბილური წყალმომარაგებაა.F
+                    </p>
+                </div>
+            </div>
+            <img src="assets/images/about/socialuri.png">
+        </div>
+        <div id="content6" *ngIf="openedTab == tabs.Tariff" [ngClass]="{'active': openedTab == tabs.Tariff}"
+            class="content">
+            <div class="innerpage-text-wrapper" style="gap: 16px;">
+                <h2 class="heading-secondary">ტარიფი</h2>
+                <div class="innerpage-text-container">
+                    <p class="text-primary">წყალმომარაგებისა და წყალარინების მომსახურებაზე დაწესებულმა ტარიფმა უნდა
+                        უზრუნველყოს არა მხოლოდ წყლის ხარისხი და მომხმარებლებისთვის მომსახურების გაწევა, არამედ
+                        სხვადასხვა ტიპის სარეაბილიტაციო, საპროფილაქტიკო და გადაუდებელი სამუშაოების
+                        ჩატარებაც. <br> 2008 წლიდან, წყალმომარაგებისა და წყალარინების ტარიფების დადგენა და მათში
+                        ნებისმიერი ცვლილების შეტანა საქართველოს ენერგეტიკისა და წყალმომარაგების მარეგულირებელი ეროვნული
+                        კომისიის (სემეკ) კომპეტენციაა.
+                    </p>
+                </div>
+                <div class="tarifs-images">
+                    <img src="assets/images/about/tarifs.png">
+                    <img src="assets/images/about/tarifs.png">
+                    <img src="assets/images/about/tarifs.png">
+                    <img src="assets/images/about/tarifs.png">
+                </div>
+                <h2 class="blue heading-secondary">თბილისისა და ქალაქ მცხეთის წყალმომარაგების მომსახურების ტარიფები</h2>
+                <p class="text-primary"> წყალმომარაგების აღნიშნული ტარიფები საქართველოს ენერგეტიკისა და წყალმომარაგების
+                    მარეგულირებელმა ეროვნულმა კომისიამ (სემეკ) 2023 წლის 28 დეკემბრის N78 დადგენილებით შპს „ჯორჯიან
+                    უოთერ ენდ ფაუერის“ მომხმარებლებისთვის დაადგინა. ტარიფები
+                    ამოქმედდა 2024 წლის 1 იანვრიდან.  2020 წლის 1 დეკემბრიდან კომპანიების ,,მცხეთის წყლის“ ,,ჯორჯიან
+                    უოთერ ენდ ფაუერთან“ გაერთიანების შედეგად, ქალაქ მცხეთის საყოფაცხოვრებო და
+                    არასაყოფაცხოვრებო მომხმარებლებს ,,ჯორჯიან უოთერ ენდ ფაუერი”
+                    საქართველოს ენერგეტიკისა და წყალმომარაგების მარეგულირებელი ეროვნული კომისიის
+                    მიერ დადგენილი ტარიფებით მოემსახურება  (N78 დადგენილება, 2023 წელი, 28 დეკემბერი). </p>
+            </div>
+
+
+            <div class="innerpage-text-wrapper">
+                <h2 class="heading-secondary">ტარიფი</h2>
+                <div class="innerpage-text-container">
+                    <p class="text-primary">წყალმომარაგებისა და წყალარინების მომსახურებაზე დაწესებულმა ტარიფმა უნდა
+                        უზრუნველყოს არა მხოლოდ წყლის ხარისხი და მომხმარებლებისთვის მომსახურების გაწევა, არამედ
+                        სხვადასხვა ტიპის სარეაბილიტაციო, საპროფილაქტიკო და გადაუდებელი სამუშაოების
+                        ჩატარებაც. 2008 წლიდან, წყალმომარაგებისა და წყალარინების ტარიფების დადგენა და მათში ნებისმიერი
+                        ცვლილების შეტანა საქართველოს ენერგეტიკისა და წყალმომარაგების მარეგულირებელი ეროვნული კომისიის
+                        (სემეკ) კომპეტენციაა.
+                    </p>
+                </div>
+                <div class="tarifs-images">
+                    <img src="assets/images/about/tarifs.png">
+                    <img src="assets/images/about/tarifs.png">
+                    <img src="assets/images/about/tarifs.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="managment-popup" class="managment-popup" *ngIf="isDialogOpen">
+    <div class="managment-popup-content">
+        <span class="close-btn" (click)="isDialogOpen = false">&times;</span>
+        <div class="topside">
+            <img id="managment-popup-image" [src]="selectedItem.imgSrc" alt="Management Image">
+            <div class="info">
+                <p id="managment-popup-year">{{selectedItem.year}}</p>
+                <p class="heading-secondary" id="managment-popup-name">{{selectedItem.name}}</p>
+                <p class="text-link" id="managment-popup-title">{{selectedItem.title}}</p>
+            </div>
+        </div>
+        <p class="text-primary" id="managment-popup-text">{{selectedItem.text}}</p>
+        <div class="managment-popup-arrows">
+            <div class="p-circle l" (click)="getPreviousItem()">
+                <div class="circle-inside">
+                    <img src="../../assets/images/about/left.png" class="left-arrow">
+                </div>
+            </div>
+            <div class="p-circle r" (click)="getNextItem()">
+                <div class="circle-inside">
+                    <img src="../../assets/images/about/right.png" class="right-arrow">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

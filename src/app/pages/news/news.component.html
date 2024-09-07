@@ -1,0 +1,876 @@
+<!-- head inside menu  -->
+<div class="container">
+  <div class="topside-header">
+    <ul class="topside-nav-links">
+      <li
+        class="topside-nav-item"
+        [ngClass]="{ active: openedTab == 1 }"
+        (click)="openedTab = 1"
+      >
+        <a data-content="content1" data-layout="flex">ახალი ამაბები</a>
+      </li>
+      <li
+        class="topside-nav-item"
+        [ngClass]="{ active: openedTab == 2 }"
+        (click)="openedTab = 2"
+      >
+        <a class="text" data-content="content2" data-layout="grid"
+          >დაგეგმილი სამუშაოები</a
+        >
+      </li>
+      <li
+        class="topside-nav-item"
+        [ngClass]="{ active: openedTab == 3 }"
+        (click)="openedTab = 3"
+      >
+        <a class="text" data-content="content3" data-layout="grid"
+          >მიმდინარე სამუშაოები</a
+        >
+      </li>
+      <li
+        class="topside-nav-item"
+        [ngClass]="{ active: openedTab == 4 }"
+        (click)="openedTab = 4"
+      >
+        <a class="text" data-content="content4" data-layout="grid">ტენდერები</a>
+      </li>
+      <li
+        class="topside-nav-item"
+        [ngClass]="{ active: openedTab == 5 }"
+        (click)="openedTab = 5"
+      >
+        <a class="text" data-content="content5" data-layout="grid"
+          >დოკუმენტები</a
+        >
+      </li>
+      <li
+        class="topside-nav-item"
+        [ngClass]="{ active: openedTab == 6 }"
+        (click)="openedTab = 6"
+      >
+        <a class="text" data-content="content6" data-layout="grid"
+          >საჯარო დადგენილებები</a
+        >
+      </li>
+      <li
+        class="topside-nav-item"
+        [ngClass]="{ active: openedTab == 7 }"
+        (click)="openedTab = 7"
+      >
+        <a class="text" data-content="content7" data-layout="grid">კარიერა</a>
+      </li>
+    </ul>
+  </div>
+  <!-- data-content shows relevant page content with id  -->
+
+  <div class="innerpage-container news-page">
+    <div
+      id="content1"
+      class="pagination-content content flex-container"
+      *ngIf="openedTab == 1"
+    >
+      <!-- data-page is news pagination relevant page -->
+      <div data-page="1" class="home-news">
+        <div class="home-news-cards">
+          <div class="home-news-card">
+            <img src="assets/images/news/news.jpg" alt="" />
+            <div class="news-date center">25.11.2024</div>
+            <h4 class="home-news-heading">
+              ჯივიპი თბილისის წყალმომარაგებაში ევროპულ სტანდარტს ნერგავს
+            </h4>
+            <p class="home-news-text">
+              დღეს, 22 ნოემბერს, ჯორჯიან უოთერ ენდ ფაუერმა თბილისში,
+              ანდრონიკაშვილის ქუჩაზე, პირველი მულტიფუნქციური საოპერაციო ცენტრი
+              გახსნა.
+            </p>
+          </div>
+          <div class="home-news-card">
+            <img src="assets/images/home-imgs/home-news.png" alt="" />
+            <div class="news-date center">25.11.2024</div>
+            <h4 class="home-news-heading">
+              ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
+            </h4>
+            <p class="home-news-text">
+              დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
+              მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე
+              დაზიანების  აღსადგენად სამუშაოებს ატარებს.
+            </p>
+          </div>
+          <div class="home-news-card">
+            <img src="assets/images/home-imgs/home-news.png" alt="" />
+            <div class="news-date center">25.11.2024</div>
+            <h4 class="home-news-heading">
+              ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
+            </h4>
+            <p class="home-news-text">
+              დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
+              მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე
+              დაზიანების  აღსადგენად სამუშაოებს ატარებს.
+            </p>
+          </div>
+          <div class="home-news-card">
+            <img src="assets/images/home-imgs/home-news.png" alt="" />
+            <div class="news-date center">25.11.2024</div>
+            <h4 class="home-news-heading">
+              ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
+            </h4>
+            <p class="home-news-text">
+              დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
+              მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე
+              დაზიანების  აღსადგენად სამუშაოებს ატარებს.
+            </p>
+          </div>
+          <div class="home-news-card">
+            <img src="assets/images/home-imgs/home-news.png" alt="" />
+            <div class="news-date center">25.11.2024</div>
+            <h4 class="home-news-heading">
+              ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
+            </h4>
+            <p class="home-news-text">
+              დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
+              მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე
+              დაზიანების  აღსადგენად სამუშაოებს ატარებს.
+            </p>
+          </div>
+          <div class="home-news-card">
+            <img src="assets/images/home-imgs/home-news.png" alt="" />
+            <div class="news-date center">25.11.2024</div>
+            <h4 class="home-news-heading">
+              ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
+            </h4>
+            <p class="home-news-text">
+              დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
+              მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე
+              დაზიანების  აღსადგენად სამუშაოებს ატარებს.
+            </p>
+          </div>
+          <div class="home-news-card">
+            <img src="assets/images/home-imgs/home-news.png" alt="" />
+            <div class="news-date center">25.11.2024</div>
+            <h4 class="home-news-heading">
+              ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
+            </h4>
+            <p class="home-news-text">
+              დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
+              მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე
+              დაზიანების  აღსადგენად სამუშაოებს ატარებს.
+            </p>
+          </div>
+          <div class="home-news-card">
+            <img src="assets/images/home-imgs/home-news.png" alt="" />
+            <div class="news-date center">25.11.2024</div>
+            <h4 class="home-news-heading">
+              ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
+            </h4>
+            <p class="home-news-text">
+              დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
+              მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე
+              დაზიანების  აღსადგენად სამუშაოებს ატარებს.
+            </p>
+          </div>
+          <div class="home-news-card">
+            <img src="assets/images/home-imgs/home-news.png" alt="" />
+            <div class="news-date center">25.11.2024</div>
+            <h4 class="home-news-heading">
+              ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
+            </h4>
+            <p class="home-news-text">
+              დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
+              მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე
+              დაზიანების  აღსადგენად სამუშაოებს ატარებს.
+            </p>
+          </div>
+          <div class="home-news-card">
+            <img src="assets/images/home-imgs/home-news.png" alt="" />
+            <div class="news-date center">25.11.2024</div>
+            <h4 class="home-news-heading">
+              ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
+            </h4>
+            <p class="home-news-text">
+              დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
+              მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე
+              დაზიანების  აღსადგენად სამუშაოებს ატარებს.
+            </p>
+          </div>
+          <div class="home-news-card">
+            <img src="assets/images/home-imgs/home-news.png" alt="" />
+            <div class="news-date center">25.11.2024</div>
+            <h4 class="home-news-heading">
+              ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
+            </h4>
+            <p class="home-news-text">
+              დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
+              მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე
+              დაზიანების  აღსადგენად სამუშაოებს ატარებს.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="pagination-numbers">
+        <span class="arrow left" id="prev">&lt;</span>
+        <div id="page-numbers"></div>
+        <span class="arrow right" id="next">&gt;</span>
+      </div>
+    </div>
+    <!-- total pagination numbers is in news-pagination.js -->
+    <!-- end first news (blog pagination) section   -->
+
+    <!-- planned-works -->
+    <div
+      id="content2"
+      class="content planned-works grid-container"
+      *ngIf="openedTab == 2"
+    >
+      <div class="city-buttons">
+        <button
+          class="tab-button"
+          [ngClass]="{ active: workButton == 1 }"
+          data-target="city-content1"
+          (click)="workButton = 1"
+        >
+          თბილისი
+        </button>
+        <button
+          class="tab-button"
+          [ngClass]="{ active: workButton == 2 }"
+          data-target="city-content2"
+          (click)="workButton = 2"
+        >
+          რუსთავი
+        </button>
+        <button
+          class="tab-button"
+          [ngClass]="{ active: workButton == 3 }"
+          data-target="city-content3"
+          (click)="workButton = 3"
+        >
+          მცხეთა
+        </button>
+      </div>
+
+      <div *ngIf="workButton == 1">
+        <div class="form-group choose-region mt-24">
+          <label>აირჩიეთ რაიონი</label>
+          <select #workTbilisiRegion (change)="(0)">
+            <option value="1">ლოტკინი</option>
+            <option value="2">საბურთალო</option>
+            <option value="3">ნაძალადევი</option>
+          </select>
+        </div>
+
+        <div *ngIf="workTbilisiRegion.value == '1'" data-region="1">
+          <div class="region-inside-wrap mt-24">
+            <div class="region-card">
+              <div class="align-center">
+                <img src="assets/images/icons/MapPin.svg" alt="pin" />
+                <h4>საბურთალო, სოფ. დიღომი, ქოშიგორის დას. N 13</h4>
+              </div>
+              <p>
+                წყალმომარაგების ქსელზე დაზიანების გამო 6/8/2024 13:00 დან
+                6/9/2024 01:00 საათამდე წყალმომარაგება შეუწყდება: ღლონტის და
+                ჭავჭავაძის ქუჩებს
+              </p>
+            </div>
+            <div class="region-card">
+              <div class="align-center">
+                <img src="assets/images/icons/MapPin.svg" alt="pin" />
+                <h4>საბურთალო, სოფ. დიღომი, ქოშიგორის დას. N 13</h4>
+              </div>
+              <p>
+                წყალმომარაგების ქსელზე დაზიანების გამო 6/8/2024 13:00 დან
+                6/9/2024 01:00 საათამდე წყალმომარაგება შეუწყდება: ღლონტის და
+                ჭავჭავაძის ქუჩებს
+              </p>
+            </div>
+            <div class="region-card">
+              <div class="align-center">
+                <img src="assets/images/icons/MapPin.svg" alt="pin" />
+                <h4>საბურთალო, სოფ. დიღომი, ქოშიგორის დას. N 13</h4>
+              </div>
+              <p>
+                წყალმომარაგების ქსელზე დაზიანების გამო 6/8/2024 13:00 დან
+                6/9/2024 01:00 საათამდე წყალმომარაგება შეუწყდება: ღლონტის და
+                ჭავჭავაძის ქუჩებს
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="workTbilisiRegion.value == '2'" data-region="2">
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+
+        <div *ngIf="workTbilisiRegion.value == '3'" data-region="3">
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+      </div>
+
+      <div *ngIf="workButton == 2">
+        <div class="form-group choose-region mt-24">
+          <label>აირჩიეთ რაიონი</label>
+          <select #workRustaviRegion (change)="(0)">
+            <option value="1">რუსთავი 1</option>
+            <option value="2">რუსთავი 2</option>
+            <option value="3">რუსთავი 3</option>
+          </select>
+        </div>
+
+        <div *ngIf="workRustaviRegion.value == '1'" data-region="1">
+          option 1
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+
+        <div *ngIf="workRustaviRegion.value == '2'" data-region="2">
+          option 2
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+
+        <div *ngIf="workRustaviRegion.value == '3'" data-region="3">
+          option 3
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+      </div>
+
+      <div *ngIf="workButton == 3">
+        <div class="form-group choose-region mt-24">
+          <label>აირჩიეთ რაიონი</label>
+          <select #workMtskhetaRegion (change)="(0)">
+            <option value="1">მცხეთა 1</option>
+            <option value="2">მცხეთა 2</option>
+            <option value="3">მცხეთა 3</option>
+          </select>
+        </div>
+
+        <div *ngIf="workMtskhetaRegion.value == '1'" data-region="1">
+          option 1
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+
+        <div *ngIf="workMtskhetaRegion.value == '2'" data-region="2">
+          option 2
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+
+        <div *ngIf="workMtskhetaRegion.value == '3'" data-region="3">
+          option 3
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- end planned works section -->
+
+    <!-- start current works section -->
+    <div
+      id="content3"
+      class="content planned-works grid-container"
+      *ngIf="openedTab == 3"
+    >
+      <div class="city-buttons">
+        <button class="tab-button" data-target="city-content1" [ngClass]="{ active: plannedWorkButton == 1 }"
+          (click)="plannedWorkButton = 1">
+          თბილისი
+        </button>
+        <button class="tab-button" data-target="city-content2" [ngClass]="{ active: plannedWorkButton == 2 }"
+        (click)="plannedWorkButton = 2">რუსთავი</button>
+        <button class="tab-button" data-target="city-content3" [ngClass]="{ active: plannedWorkButton == 3 }"
+        (click)="plannedWorkButton = 3">მცხეთა</button>
+      </div>
+
+      <div class="city-content1" *ngIf="plannedWorkButton == 1">
+        <div class="form-group choose-region mt-24">
+          <label>აირჩიეთ რაიონი</label>
+          <select #tbilisiRegion (change)="(0)">
+            <option value="1">საბურთალო</option>
+            <option value="2">ლოტკინი</option>
+            <option value="3">ნაძალადევი</option>
+          </select>
+        </div>
+
+        <div *ngIf="tbilisiRegion.value == '1'" data-region="1">
+          <div class="region-inside-wrap mt-24">
+            <div class="region-card">
+              <div class="align-center">
+                <img src="assets/images/icons/MapPin.svg" alt="pin" />
+                <h4>მიმდინარე სამუშაო დიღომი, ქოშიგორის დას. N 13</h4>
+              </div>
+              <p>
+                წყალმომარაგების ქსელზე დაზიანების გამო 6/8/2024 13:00 დან
+                6/9/2024 01:00 საათამდე წყალმომარაგება შეუწყდება: ღლონტის და
+                ჭავჭავაძის ქუჩებს
+              </p>
+            </div>
+            <div class="region-card">
+              <div class="align-center">
+                <img src="assets/images/icons/MapPin.svg" alt="pin" />
+                <h4>საბურთალო, სოფ. დიღომი, ქოშიგორის დას. N 13</h4>
+              </div>
+              <p>
+                წყალმომარაგების ქსელზე დაზიანების გამო 6/8/2024 13:00 დან
+                6/9/2024 01:00 საათამდე წყალმომარაგება შეუწყდება: ღლონტის და
+                ჭავჭავაძის ქუჩებს
+              </p>
+            </div>
+            <div class="region-card">
+              <div class="align-center">
+                <img src="assets/images/icons/MapPin.svg" alt="pin" />
+                <h4>საბურთალო, სოფ. დიღომი, ქოშიგორის დას. N 13</h4>
+              </div>
+              <p>
+                წყალმომარაგების ქსელზე დაზიანების გამო 6/8/2024 13:00 დან
+                6/9/2024 01:00 საათამდე წყალმომარაგება შეუწყდება: ღლონტის და
+                ჭავჭავაძის ქუჩებს
+              </p>
+            </div>
+            <div class="region-card">
+              <div class="align-center">
+                <img src="assets/images/icons/MapPin.svg" alt="pin" />
+                <h4>საბურთალო, სოფ. დიღომი, ქოშიგორის დას. N 13</h4>
+              </div>
+              <p>
+                წყალმომარაგების ქსელზე დაზიანების გამო 6/8/2024 13:00 დან
+                6/9/2024 01:00 საათამდე წყალმომარაგება შეუწყდება: ღლონტის და
+                ჭავჭავაძის ქუჩებს
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="tbilisiRegion.value == '2'" data-region="2">
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+
+        <div *ngIf="tbilisiRegion.value == '3'" data-region="3">
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+      </div>
+
+      <div class="city-content2" *ngIf="plannedWorkButton == 2">
+        <div class="form-group choose-region mt-24">
+          <label>აირჩიეთ რაიონი</label>
+          <select #rustaviRegion (change)="(0)">
+            <option value="1">რუსთავი 1</option>
+            <option value="2">რუსთავი 2</option>
+            <option value="3">რუსთავი 3</option>
+          </select>
+        </div>
+
+        <div *ngIf="rustaviRegion.value == '1'" data-region="1">
+          option 1
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+
+        <div *ngIf="rustaviRegion.value == '2'" data-region="2">
+          option 2
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+
+        <div *ngIf="rustaviRegion.value == '3'" data-region="3">
+          option 3
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+      </div>
+
+      <div class="city-content3" *ngIf="plannedWorkButton == 3">
+        <div class="form-group choose-region mt-24">
+          <label>აირჩიეთ რაიონი</label>
+          <select #mtskhetaRegion (change)="(0)">
+            <option value="1">მცხეთა 1</option>
+            <option value="2">მცხეთა 2</option>
+            <option value="3">მცხეთა 3</option>
+          </select>
+        </div>
+
+        <div *ngIf="mtskhetaRegion.value == '1'" data-region="1">
+          option 1
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+
+        <div *ngIf="mtskhetaRegion.value == '2'" data-region="2">
+          option 2
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+
+        <div *ngIf="mtskhetaRegion.value == '3'" data-region="3">
+          option 3
+          <img class="not-found" src="assets/images/not-found.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- end current works section -->
+
+    <!-- start tenders  section -->
+    <div id="content4" class="content grid-container" *ngIf="openedTab == 4">
+      <div class="tenders">
+        <p class="text tenders-head-text">
+          ნებისმიერ დაინტერესებულ პირს შესაძლებლობა აქვს მონაწილეობა მიიღოს
+          კომპანია ჯორჯიან <br />
+          უოთერ ენდ ფაუერის მიერ გამოცხადებულ ტენდერში. ტენდერების შესახებ
+          ინფორმაცია ხელიმისაწვდომია კომპანიის ვებგვერდზე და
+          <a class="text-link" href="www.tenders.ge" target="_blank"
+            >www.tenders.ge</a
+          >-ზე
+        </p>
+        <h5 class="mt-24 tenders-heading">შიდა შესყიდვის ტენდერები:</h5>
+        <div class="tenders-cards">
+          <div class="tenders-card">
+            <div class="align-center">
+              <img src="assets/images/icons/Car.svg" alt="" />
+              <h4 class="tender-title">ტენდერი ავტომობილების შესყიდვაზე</h4>
+            </div>
+            <div class="tender-card-info">
+              <p><span>კატეგორია:</span> სპეც. ტექნიკის შესყიდვა</p>
+              <p>
+                <span>აქტიურია:</span> 27.05.2024-დან
+                <span class="date">30.06.2024-მდე</span>
+              </p>
+            </div>
+          </div>
+          <div class="tenders-card">
+            <div class="align-center">
+              <img src="assets/images/icons/Car.svg" alt="" />
+              <h4 class="tender-title">ტენდერი ავტომობილების შესყიდვაზე</h4>
+            </div>
+            <div class="tender-card-info">
+              <p><span>კატეგორია:</span> სპეც. ტექნიკის შესყიდვა</p>
+              <p>
+                <span>აქტიურია:</span> 27.05.2024-დან
+                <span class="date">30.06.2024-მდე</span>
+              </p>
+            </div>
+          </div>
+          <div class="tenders-card">
+            <div class="align-center">
+              <img src="assets/images/icons/Car.svg" alt="" />
+              <h4 class="tender-title">ტენდერი ავტომობილების შესყიდვაზე</h4>
+            </div>
+            <div class="tender-card-info">
+              <p><span>კატეგორია:</span> სპეც. ტექნიკის შესყიდვა</p>
+              <p>
+                <span>აქტიურია:</span> 27.05.2024-დან
+                <span class="date">30.06.2024-მდე</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end tenders  section -->
+
+    <!-- start documents section  -->
+    <div id="content5" class="content grid-container" *ngIf="openedTab == 5">
+      <div class="documents">
+        <h2 class="documents-heading">მართვის სისტემის პოლიტიკა</h2>
+        <p class="text">
+          წყალმომარაგების შეზღუდვისა და აღდგენის შესახებ ინფორმაციას, ჯორჯიან
+          უოთერ ენდ ფაუერი აბონენტებს წინასწარ, SMS-შეტყობინების სახით უგზავნის.
+          დეტალური ინფორმაციის მოძიება შესაძლებელია კომპანიის ცხელი ხაზის - 2 93
+          11 11, ფეისბუქისა და ვებგვერდის მეშვეობით
+          <a href=" http://www.gwp.ge" class="text-link"> http://www.gwp.ge</a>
+        </p>
+        <div class="pdf-buttons mt-32">
+          <div class="btn-pdf">
+            <img src="assets/images/icons/pdf.png" />
+            <p class="text-link">
+              შესაბამისობის საკითხებთან დაკავშირებით პარტნიორებთან ურთიერთობის
+              პოლიტიკა
+            </p>
+          </div>
+          <div class="btn-pdf">
+            <img src="assets/images/icons/pdf.png" />
+            <p class="text-link">ადამიანის უფლებების შესახებ პოლიტიკა</p>
+          </div>
+          <div class="btn-pdf">
+            <img src="assets/images/icons/pdf.png" />
+            <p class="text-link">ანტიკორუფციული პოლიტიკა</p>
+          </div>
+          <div class="btn-pdf">
+            <img src="assets/images/icons/pdf.png" />
+            <p class="text-link">საჩუქრების შესახებ პოლიტიკა</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End documents section  -->
+
+    <div id="content6" class="content flex-container" *ngIf="openedTab == 6">
+      <div class="documents">
+        <p class="text">
+          საქართველოს ზოგადი ადმინისტრაციული კოდექსის 57-ე მუხლის, საქართველოს
+          ადმინისტრაციულ სამართალდარღვევათა კოდექსის 268-ე მუხლის მე-9 პუნქტის
+          და 273-ე მუხლის, საქართველოს ენერგეტიკისა და წყალმომარაგების
+          მარეგულირებელი ეროვნული კომისიის 2010 წლის 12 აგვისტოს #14
+          დადგენილების <br />
+          <br />
+          მე-10 და მე-11 მუხლების თანახმად ჯივიპის მიერ ადმინისტრაციული
+          სამართალდარღვევის საქმეებზე მიღებული დადგენილება მხარეს ფოსტის
+          მეშვეობით ეგზავნება დადგენილების გამოტანიდან 3 სამუშაო დღის ვადაში. იმ
+          <br />
+          <br />
+          შემთხვევაში თუ დადგენილების ჩაბარება ადრესატისთვის სხვადასხვა მიზეზის
+          გამო ვერ მოხერხდა (დადგენილება ფოსტის მეშვეობით მხარესთან იგზავნება
+          ორჯერ), მაშინ დადგენილება საჯაროდ განთავსდება კომპანიის ვებგვერდზე და
+          ჩაბარებულად ჩაითვლება მისი საჯაროდ განთავსებიდან მე-3 დღეს.
+          საქართველოს <br />
+          <br />
+          ადმინისტრაციულ სამართალდარღვევათა კოდექსში აღნიშნული ცვლილება ძალაში
+          შევიდა 2019 წლის 24 ოქტომბრიდან. PDF - დოკუმენტის გახსნისას გთხოვთ
+          პაროლის ველში მიუთითოთ ფიზიკური პირის შემთხვევაში პირადი ნომერი,
+          იურიდიული პირის შემთხვევაში საიდენტიფიკაციო ნომერი. საიდენტიფიკაციო
+          ნომრის არარსებობის შემთხვევაში მიუთითეთ დადგენილების ნომერი.
+        </p>
+        <div class="pdf-buttons mt-32">
+          <div class="btn-pdf">
+            <img src="assets/images/icons/pdf.png" />
+            <p class="text-link">
+              gwp დადგენილება - შპს "მოლი პლიუსი" 2022-12-20
+            </p>
+          </div>
+          <div class="btn-pdf">
+            <img src="assets/images/icons/pdf.png" />
+            <p class="text-link">
+              gwp დადგენილება - შპს "მოლი პლიუსი" 2022-12-20
+            </p>
+          </div>
+          <div class="btn-pdf">
+            <img src="assets/images/icons/pdf.png" />
+            <p class="text-link">
+              gwp დადგენილება - შპს "მოლი პლიუსი" 2022-12-20
+            </p>
+          </div>
+          <div class="btn-pdf">
+            <img src="assets/images/icons/pdf.png" />
+            <p class="text-link">ადამიანის უფლებების შესახებ პოლიტიკა</p>
+          </div>
+          <div class="btn-pdf">
+            <img src="assets/images/icons/pdf.png" />
+            <p class="text-link">ანტიკორუფციული პოლიტიკა</p>
+          </div>
+          <div class="btn-pdf">
+            <img src="assets/images/icons/pdf.png" />
+            <p class="text-link">საჩუქრების შესახებ პოლიტიკა</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- start career content  -->
+    <div id="content7" class="content flex-container" *ngIf="openedTab == 7">
+      <div class="career-content-wrap">
+        <div class="career-content" data-career-id="1">
+          <div class="career-card-head align-center">
+            <img src="assets/images/icons/career.png" alt="" />
+            <h3>
+              სასაწყობე მეურნეობის სამსახურში, საწყობის ოპერატორის პოზიცია
+            </h3>
+          </div>
+          <div class="career-card-body">
+            <div class="align-center">
+              <img src="assets/images/icons/clock.svg" alt="" />
+              <p>სრული განაკვეთი</p>
+            </div>
+            <div class="align-center">
+              <img src="assets/images/icons/MapPin.svg" alt="" />ოფისიდან
+            </div>
+            <p class="active-date mt-8">
+              <span>აქტიურია:</span> 27.05.2024-დან
+              <span class="date">30.06.2024-მდე</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="career-content" data-career-id="2">
+          <div class="career-card-head align-center">
+            <img src="assets/images/icons/career.png" alt="" />
+            <h3>
+              სასაწყობე მეურნეობის სამსახურში, საწყობის ოპერატორის პოზიცია
+            </h3>
+          </div>
+          <div class="career-card-body">
+            <div class="align-center">
+              <img src="assets/images/icons/clock.svg" alt="" />
+              <p>სრული განაკვეთი</p>
+            </div>
+            <div class="align-center">
+              <img src="assets/images/icons/MapPin.svg" alt="" />ოფისიდან
+            </div>
+            <p class="active-date mt-8">
+              <span>აქტიურია:</span> 27.05.2024-დან
+              <span class="date">30.06.2024-მდე</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="career-content" data-career-id="3">
+          <div class="career-card-head align-center">
+            <img src="assets/images/icons/career.png" alt="" />
+            <h3>
+              სასაწყობე მეურნეობის სამსახურში, საწყობის ოპერატორის პოზიცია
+            </h3>
+          </div>
+          <div class="career-card-body">
+            <div class="align-center">
+              <img src="assets/images/icons/clock.svg" alt="" />
+              <p>სრული განაკვეთი</p>
+            </div>
+            <div class="align-center">
+              <img src="assets/images/icons/MapPin.svg" alt="" />ოფისიდან
+            </div>
+            <p class="active-date mt-8">
+              <span>აქტიურია:</span> 27.05.2024-დან
+              <span class="date">30.06.2024-მდე</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="career-content" data-career-id="4">
+          <div class="career-card-head align-center">
+            <img src="assets/images/icons/career.png" alt="" />
+            <h3>
+              სასაწყობე მეურნეობის სამსახურში, საწყობის ოპერატორის პოზიცია
+            </h3>
+          </div>
+          <div class="career-card-body">
+            <div class="align-center">
+              <img src="assets/images/icons/clock.svg" alt="" />
+              <p>სრული განაკვეთი</p>
+            </div>
+            <div class="align-center">
+              <img src="assets/images/icons/MapPin.svg" alt="" />ოფისიდან
+            </div>
+            <p class="active-date mt-8">
+              <span>აქტიურია:</span> 27.05.2024-დან
+              <span class="date">30.06.2024-მდე</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="career-content" data-career-id="5">
+          <div class="career-card-head align-center">
+            <img src="assets/images/icons/career.png" alt="" />
+            <h3>
+              სასაწყობე მეურნეობის სამსახურში, საწყობის ოპერატორის პოზიცია
+            </h3>
+          </div>
+          <div class="career-card-body">
+            <div class="align-center">
+              <img src="assets/images/icons/clock.svg" alt="" />
+              <p>სრული განაკვეთი</p>
+            </div>
+            <div class="align-center">
+              <img src="assets/images/icons/MapPin.svg" alt="" />ოფისიდან
+            </div>
+            <p class="active-date mt-8">
+              <span>აქტიურია:</span> 27.05.2024-დან
+              <span class="date">30.06.2024-მდე</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="career-content" data-career-id="6">
+          <div class="career-card-head align-center">
+            <img src="assets/images/icons/career.png" alt="" />
+            <h3>
+              სასაწყობე მეურნეობის სამსახურში, საწყობის ოპერატორის პოზიცია
+            </h3>
+          </div>
+          <div class="career-card-body">
+            <div class="align-center">
+              <img src="assets/images/icons/clock.svg" alt="" />
+              <p>სრული განაკვეთი</p>
+            </div>
+            <div class="align-center">
+              <img src="assets/images/icons/MapPin.svg" alt="" />ოფისიდან
+            </div>
+            <p class="active-date mt-8">
+              <span>აქტიურია:</span> 27.05.2024-დან
+              <span class="date">30.06.2024-მდე</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end career content  -->
+
+      <!-- Popup Modal -->
+      <div id="careerModal" class="modal">
+        <div class="modal-content">
+          <span class="close"
+            ><img src="assets/images/icons/close-modal.png" alt=""
+          /></span>
+          <div id="modal-body"></div>
+        </div>
+      </div>
+
+      <!-- Careers popup inside contents -->
+      <div class="career-detail" id="career-1-content" style="display: none">
+        <div class="career-popup-body">
+          <img class="gwp-logo" src="assets/images/GWP-LOGO.png" alt="" />
+          <h3 class="career-popup-heading">
+            ახალი მიერთების და რეაბილიტაციის სამსახურში, მუშა/ზეინკლის პოზიცია
+          </h3>
+          <p class="text-primary">
+            ჯორჯიან უოთერ ენდ ფაუერი  აცხადებს ვაკანსიას ახალი მიერთების და
+            რეაბილიტაციის სამსახურში, მუშა/ზეინკლის პოზიციაზე.
+          </p>
+          <ul>
+            <h5 class="list-heading mt-16">პასუხისმგებლობა/მოვალეობები:</h5>
+            <li class="text-primary">პასუხისმგებლობა/მოვალეობები:</li>
+            <li class="text-primary">
+              გრუნტის დამუშავება, მიწის გათხრითი სამუშაოების წარმოება და
+              განათხარის ქვიშა-ხრეშოვანი ნარევით შევსება;
+            </li>
+            <li class="text-primary">პასუხისმგებლობა/მოვალეობები:</li>
+            <li class="text-primary">
+              გრუნტის დამუშავება, მიწის გათხრითი სამუშაოების წარმოება და
+              განათხარის ქვიშა-ხრეშოვანი ნარევით შევსება;
+            </li>
+            <li class="text-primary">პასუხისმგებლობა/მოვალეობები:</li>
+            <li class="text-primary">
+              გრუნტის დამუშავება, მიწის გათხრითი სამუშაოების წარმოება და
+              განათხარის ქვიშა-ხრეშოვანი ნარევით შევსება;
+            </li>
+          </ul>
+          <p class="text-primary">
+            ჯორჯიან უოთერ ენდ ფაუერი  აცხადებს ვაკანსიას ახალი მიერთების და
+            რეაბილიტაციის სამსახურში, მუშა/ზეინკლის პოზიციაზე.
+          </p>
+          <ul>
+            <h5 class="list-heading mt-16">პასუხისმგებლობა/მოვალეობები:</h5>
+            <li class="text-primary">პასუხისმგებლობა/მოვალეობები:</li>
+            <li class="text-primary">
+              გრუნტის დამუშავება, მიწის გათხრითი სამუშაოების წარმოება და
+              განათხარის ქვიშა-ხრეშოვანი ნარევით შევსება;
+            </li>
+            <li class="text-primary">პასუხისმგებლობა/მოვალეობები:</li>
+            <li class="text-primary">
+              გრუნტის დამუშავება, მიწის გათხრითი სამუშაოების წარმოება და
+              განათხარის ქვიშა-ხრეშოვანი ნარევით შევსება;
+            </li>
+            <li class="text-primary">პასუხისმგებლობა/მოვალეობები:</li>
+            <li class="text-primary">
+              გრუნტის დამუშავება, მიწის გათხრითი სამუშაოების წარმოება და
+              განათხარის ქვიშა-ხრეშოვანი ნარევით შევსება;
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="career-detail" id="career-2-content" style="display: none">
+        <h2>career 2</h2>
+      </div>
+      <div class="career-detail" id="career-3-content" style="display: none">
+        <h2>career 3</h2>
+      </div>
+      <div class="career-detail" id="career-4-content" style="display: none">
+        <h2>career 4</h2>
+      </div>
+      <div class="career-detail" id="career-5-content" style="display: none">
+        <h2>career 5</h2>
+      </div>
+      <div class="career-detail" id="career-6-content" style="display: none">
+        <h2>career 6</h2>
+      </div>
+    </div>
+
+    <!-- end news inside contents   -->
+  </div>
+</div>

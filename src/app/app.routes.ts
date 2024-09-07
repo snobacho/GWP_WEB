@@ -1,0 +1,39 @@
+import { Routes } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { NewsComponent } from './pages/news/news.component';
+import { EthicComponent } from './pages/ethic/ethic.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { BlogInsideComponent } from './pages/blog-inside/blog-inside.component';
+import { CabinetComponent } from './pages/cabinet/cabinet.component';
+import { CareerInsideComponent } from './pages/career-inside/career-inside.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { EditAbonentsComponent } from './pages/edit-abonents/edit-abonents.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { AuthComponent } from './pages/auth/auth.component';
+import { RegComponent } from './pages/reg/reg.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { NotificationsComponent } from './pages/notifications/notifications.component';
+import { NotificationsDetailComponent } from './pages/notifications-detail/notifications-detail.component';
+
+export const routes: Routes = [
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
+    { path: 'about-us', component: AboutUsComponent },
+    { path: 'about-us/detail', component: BlogInsideComponent },
+    { path: 'career/detail', component: CareerInsideComponent },
+    { path: 'services', component: ServicesComponent },
+    { path: 'services/edit', component: EditAbonentsComponent },
+    { path: 'services/faq', component: FaqComponent },
+    { path: 'services', component: ServicesComponent },
+    { path: 'cabinet', component: CabinetComponent },
+    { path: 'news', component: NewsComponent },
+    { path: 'ethic', component: EthicComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'profile', component: ProfileComponent },
+    { path: 'auth', component: AuthComponent },
+    { path: 'reg', component: RegComponent },
+    { path: 'notifications', component: NotificationsComponent },
+    { path: 'notifications/detail', component: NotificationsDetailComponent },
+    { path: '**', component: HomeComponent },
+];

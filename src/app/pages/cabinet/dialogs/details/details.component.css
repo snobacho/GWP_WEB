@@ -1,0 +1,183 @@
+.popup-content {
+  max-width: 450px;
+  overflow: auto;
+  max-height: 600px;
+}
+
+.popup-top {
+  width: 100%;
+  align-items: flex-start;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+}
+
+.form-group label {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.form-group input,
+.form-group select {
+  max-width: 100%;
+  width: 100%;
+}
+
+.popup-buttons {
+  width: 100%;
+}
+
+.popup-buttons button {
+  max-width: 100%;
+  width: 100%;
+}
+#popup-details .popup-content {
+  max-width: unset;
+  width: auto;
+}
+
+.signup-wrap * {
+  font-family: FiraGO;
+  font-style: normal;
+}
+
+.signup-wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.signup-wrap .signup-headings p {
+  max-width: 533px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#login-form {
+  max-width: 804px;
+  margin: 0 auto;
+}
+
+.form-groups-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.form-groups-wrap input {
+  width: 390px;
+}
+
+.signup-bottom-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup-bottom-form button {
+  width: 100%;
+  max-width: 308px;
+}
+
+.sign-up-chackboxs {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-bottom-form .form-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.sign-up-chackbox {
+  display: flex;
+  gap: 12px;
+}
+
+.sign-up-chackbox:nth-child(2) {
+  margin-top: 12px;
+}
+
+.sign-up-chackbox label {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sign-up-chackbox label a {
+  color: #0576BE;
+  font-size: 14px;
+  font-weight: 600;
+}
+@media screen and (max-width: 1024px) {
+  .profile-wrapper {
+      width: 100%;
+  }
+  .profile-row {
+      flex-direction: column;
+  }
+  .profile-item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+  .bordered-box {
+      border: none;
+  }
+  .place-title,
+  .place-text {
+      font-size: 12px;
+  }
+  .profile-item .place-title {
+      color: #000;
+      font-size: 15px;
+      font-weight: 600;
+  }
+  #login-form {
+      display: flex;
+      max-width: 90%;
+      flex-direction: column;
+      gap: 8px;
+  }
+  .form-groups-wrap {
+      flex-direction: column;
+      gap: 8px;
+  }
+  .signup-bottom-form {
+      flex-direction: column;
+      gap: 16px;
+      padding: 12px 0;
+      width: 100%;
+  }
+  .signup-bottom-form button {
+      max-width: 100%;
+  }
+  .signup-wrap {
+      align-items: stretch;
+      padding: 0;
+  }
+  .popup-content {
+      max-width: 90% !important;
+      padding: 24px;
+  }
+}

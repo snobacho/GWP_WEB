@@ -1,0 +1,131 @@
+<header class="container space-between">
+    <div class="header-left flex">
+        <a class="logo-link" routerLink="/home">
+            <img src="assets/images/GWP-LOGO.png" alt="Logo">
+        </a>
+        <nav class="flex">
+            <!-- menu item with active class color -->
+            <li><a class="menu-item text" routerLink="about-us">ჩვენ შესახებ</a></li>
+            <li class="dropdown-item">
+                <a class="text" routerLink="services">სერვისები</a>
+                <ul class="dropdown-items">
+                    <li><a routerLink="services/faq">დისტანციური მომსახურება</a></li>
+                    <li><a routerLink="services/edit">აბონენტის სულადობის კორექტირება  </a></li>
+                    <li><a href="#">სერვისი 3</a></li>
+                </ul>
+            </li>
+            <li><a class="menu-item text" routerLink="news">სიახლეები</a></li>
+            <li><a class="menu-item text" routerLink="ethic">ეთიკა და პოლიტიკა</a></li>
+            <li><a class="menu-item text" routerLink="contact">კონტაქტი</a></li>
+        </nav>
+    </div>
+    <div class="header-right align-center">
+        <div class="header-search">
+            <input type="text" placeholder="ძიება">
+            <img src="assets/images/search-icon.png" alt="search icon">
+        </div>
+        <div class="header-lang" *ngIf="!loggedIn">
+            <div class="active-lang">
+                <img class="lang-globe" src="assets/images/globe-lang.png" alt="flag icon">
+                <span>ENG</span>
+            </div>
+            <ul class="lang-dropdown">
+                <li>
+                    <a href="#"><img class="lang-icon" src="assets/images/flag-geo.png" alt="flag icon">GEO</a>
+                </li>
+                <li class="active">
+                    <a href="#"><img class="lang-icon" src="assets/images/flag-eng.png" alt="flag icon">ENG</a>
+                </li>
+                <li>
+                    <a href="#"><img class="lang-icon" src="assets/images/flag-esp.png" alt="flag icon">ESP</a>
+                </li>
+            </ul>
+        </div>
+        <button class="btn-primary login-btn" *ngIf="!loggedIn"><a routerLink="cabinet">ჩემი კაბინეტი</a></button>
+        <div class="logined-header" *ngIf="loggedIn">
+            <img src="../assets/images/icons/user-logined-icon.png" alt="" >
+            <div class="logined-user">
+                <h5 class="username">გიორგი</h5>
+                <p class="user-number">599521096</p>
+            </div>
+            <img src="../assets/images/icons/header-msg.png" alt="" (click)="openMessages()">
+            <a href="#" class="dots">...</a>
+        </div>
+    </div>
+</header>
+
+<!-- mobile header  -->
+<nav class="mobile-menu-container">
+    <div class="mobile-head">
+        <div class="menu-toggle" (click)="menuOpened = true">
+            <img src="assets/images/icons/menu-burger.png" alt="Menu Toggle" id="menuToggle">
+        </div>
+        <div class="logo-mobile">
+            <img src="assets/images/GWP-LOGO.png" routerLink="/home" alt="Logo">
+        </div>
+        <!-- <div class="header-lang">
+            <div class="active-lang">
+                <img class="lang-globe" src="assets/images/globe-lang.png" alt="flag icon">
+                <span>ENG</span>
+            </div>
+            <ul class="lang-dropdown">
+                <li>
+                    <a href="#"><img class="lang-icon" src="assets/images/flag-geo.png" alt="flag icon">GEO</a>
+                </li>
+                <li class="active">
+                    <a href="#"><img class="lang-icon" src="assets/images/flag-eng.png" alt="flag icon">ENG</a>
+                </li>
+                <li>
+                    <a href="#"><img class="lang-icon" src="assets/images/flag-esp.png" alt="flag icon">ESP</a>
+                </li>
+            </ul>
+        </div> -->
+        <div class="mobile-logined-user-menu">
+            <div>
+                <img class="mobile-logined-icon" src="../assets/images/icons/user-logined-icon.png" alt="">
+                <ul class="mobile-logined-dropdown">
+                    <li><a href="#"><img src="../assets/images/icons/cabinet.png" alt="">ჩემი კაბინეტი</a></li>
+                    <li><a routerLink="notifications"><img src="../assets/images/icons/msgs.png" alt="">შეტყობინებები</a></li>
+                    <div class="mobile-logined-languages">
+                        <div class="logined-left">
+                            <img src="../assets/images/icons/earth.png" alt="">
+                            <a href="#">ენის შეცვლა</a>
+                        </div>
+                        <div class="logined-lang">
+                            <span class="active">GEO</span>
+                            <span>ENG</span>
+                        </div>
+
+                    </div>
+                    <li class="mobile-logout"><a href="#"><img src="../assets/images/icons/SignOut.png"
+                                alt="">გასვლა</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" [ngStyle]="{'left': menuOpened ? '0px' : '-308px'}">
+        <div class="space-between">
+            <h4 class="mobile-menu-heading">მენიუ</h4>
+            <div class="menu-close">
+                <img src="assets/images/icons/close-burger.png" alt="Close Menu" id="menuClose" (click)="menuOpened = false">
+            </div>
+        </div>
+        <div class="header-search">
+            <input type="text" placeholder="ძიება">
+            <img src="assets/images/search-icon.png" alt="search icon">
+        </div>
+        <ul>
+            <li><a class="text-primary menu-item" routerLink="about-us" (click)="menuOpened = false">ჩვენ შესახებ</a></li>
+            <li><a class="text-primary menu-item" routerLink="cabinet" (click)="menuOpened = false">ჩემი კაბინეტი</a></li>
+            <li><a class="text-primary menu-item" routerLink="news" (click)="menuOpened = false">სიახლეები</a></li>
+            <li><a class="text-primary menu-item" routerLink="ethic" (click)="menuOpened = false">ეთიკა და პოლიტიკა</a></li>
+            <li><a class="text-primary menu-item" routerLink="contact" (click)="menuOpened = false">კონტაქტი</a></li>
+        </ul>
+        <a routerLink="cabinet" class="btn-primary mobile-cabinets-btn" routerLink="cabinet" (click)="menuOpened = false">ჩემი კაბინეტი</a>
+    </div>
+    <div class="menu-overlay" id="menuOverlay" [ngClass]="{'active': menuOpened}" (click)="menuOpened = false"></div>
+</nav>
+<div class="header-line"></div>
+<!-- end header  -->

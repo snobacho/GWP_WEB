@@ -1,0 +1,22 @@
+<div id="popup-row" class="popup" style="display: flex;">
+  <div class="popup-content">
+    <img id="closePopupRow" class="close-button" src="assets/images/icons/close.png" (click)="onClose()" />
+    <div class="popup-top">
+      <p class="heading-secondary">ახალი აბონენტის დამატება</p>
+    </div>
+    <div class="form-group">
+      <label>აბონენტის ნომერი</label>
+      <input type="text" id="abonentNumber" placeholder="მიუთითეთ აბონენტის ნომერი" (input)="validateAbonentNumber()" />
+      <p id="errorAbonentNumber" class="text-primary" *ngIf="isInvalidAbonentNumber" style="font-size: 12px;">აბონენტის
+        ნომერი უნდა
+        შედგებოდეს 7 ციფრისგან</p>
+    </div>
+    <div class="form-group">
+      <label>მისამართი</label>
+      <input type="text" id="address" placeholder="მიუთითეთ მისამართი" />
+    </div>
+    <div class="popup-buttons">
+      <button id="submitBtn" class="btn-primary" [disabled]="isSubmitDisabled">დადასტურება</button>
+    </div>
+  </div>
+</div>

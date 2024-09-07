@@ -1,0 +1,132 @@
+.footer-wrap {
+    width: 100%;
+    background: var(--color-primary);
+    height: 282px;
+    position: relative;
+    padding-top: 32px;
+    background-repeat: no-repeat;
+    background-image: url(../imgages/footer-bg-img.png);
+    background-position: bottom;
+}
+
+footer * {
+    font-family: FiraGo;
+    color: white;
+}
+
+footer li a,
+.footer-faq a {
+    color: #FFF;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+
+footer ul li,
+.footer-faq {
+    margin: 16px 0;
+}
+
+footer .footer-adress-heading {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+footer .footer-last-row {
+    display: flex;
+    justify-content: space-between;
+    height: 195px;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+footer .footer-socials img {
+    margin-left: 18px;
+}
+
+footer .footer-logos {
+    gap: 18px;
+}
+
+footer .first-f-item {
+    margin-top: 0;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact-item span {
+    font-weight: 700;
+}
+
+.footer-contact-item a {
+    font-weight: 500;
+}
+
+@media (max-width: 1350px) {
+    .footer-wrap {
+        height: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .footer-adress {
+        display: none;
+    }
+    .footer-wrap footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .footer-contact-item {
+        display: flex;
+        justify-content: flex-end;
+        gap: 4px;
+    }
+    .mobile-faq {
+        display: flex;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .desktop-faq {
+        display: none;
+    }
+    footer .footer-last-row {
+        display: flex;
+        justify-content: normal;
+        height: auto;
+        align-items: flex-end;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .footer-socials {
+        display: flex;
+        gap: 24px;
+        margin: 43px auto 0 auto;
+    }
+    .footer-socials a img {
+        margin: 0;
+    }
+    .footer-logos {
+        gap: 32px;
+        margin-bottom: 32px;
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 1050px) {
+    .mobile-faq {
+        display: none;
+    }
+    .desktop-faq {
+        display: block;
+    }
+}
+

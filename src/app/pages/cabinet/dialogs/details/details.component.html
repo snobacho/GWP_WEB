@@ -1,0 +1,67 @@
+<mat-dialog-content>
+  <div id="popup-details" class="popup" style="display: flex;">
+    <div class="popup-content">
+      <img id="closePopup-details" class="close-button" src="assets/images/icons/close.png" (click)="onClose()" />
+      <div class="container signup-wrap mt-32">
+        <p class="heading-secondary">მონაცემების განახლება</p>
+        <form [formGroup]="detailsForm" id="login-form">
+          <div class="form-groups-wrap">
+            <div class="form-group mt-24">
+              <label>სახელი</label>
+              <input type="text" class="form-control" placeholder="მიუთითეთ სახელი" formControlName="name">
+            </div>
+            <div class="form-group mt-24">
+              <label>გვარი</label>
+              <input type="text" class="form-control" placeholder="მიუთითეთ გვარი" formControlName="surname">
+            </div>
+          </div>
+          <div class="form-groups-wrap">
+            <div class="form-group mt-24">
+              <label>პირადი ნომერი</label>
+              <input type="text" class="form-control" placeholder="მიუთითეთ პირადი ნომერი" formControlName="personalNumber">
+            </div>
+            <div class="form-group mt-24">
+              <label>აბონენტის ნომერი</label>
+              <input type="text" class="form-control" placeholder="მიუთითეთ აბონენტის ნომერი" formControlName="abonentNumber">
+            </div>
+          </div>
+          <div class="form-groups-wrap">
+            <div class="form-group mt-24">
+              <label>მობილურის ნომერი</label>
+              <input type="tel" class="form-control" placeholder="მიუთითეთ მობილურის ნომერი" formControlName="mobileNumber">
+            </div>
+            <div class="form-group mt-24">
+              <label>ელ.ფოსტა</label>
+              <input type="email" class="form-control" placeholder="მიუთითეთ ელ.ფოსტა" formControlName="email">
+            </div>
+          </div>
+          <div class="form-groups-wrap">
+            <div class="form-group mt-24">
+              <label>პაროლი</label>
+              <input type="password" class="form-control" placeholder="მიუთითეთ პაროლი" formControlName="password">
+            </div>
+            <div class="form-group mt-24">
+              <label>გაიმეორეთ პაროლი</label>
+              <input type="password" class="form-control" placeholder="გაიმეორეთ პაროლი" formControlName="confirmPassword">
+            </div>
+          </div>
+          <div class="signup-bottom-form mt-24">
+            <div class="sign-up-chackboxs">
+              <div class="sign-up-chackbox">
+                <input type="checkbox" id="terms" formControlName="termsAccepted">
+                <label for="terms">ვეთანხმები <a href="#">წესებს და პირობებს</a></label>
+              </div>
+              <div class="sign-up-chackbox">
+                <input type="checkbox" id="privacy" formControlName="privacyAccepted">
+                <label for="privacy">კონფიდენციალობის პირობები/მონაცემთა დაცვა</label>
+              </div>
+            </div>
+  
+            <button [disabled]="!detailsForm.invalid" type="button" class="btn-primary" (click)="openSmsPopup()">მონაცემების შენახვა</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+

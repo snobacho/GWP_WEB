@@ -1,0 +1,29 @@
+<div class="notifications">
+  <p class="heading-secondary">შეტყობინებები</p>
+  <div class="messages-wrapper">
+    <div class="messages-list">
+      <div class="checkbox-group">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <input type="checkbox" id="selectAll">
+          <label for="selectAll" style="color: #696969; font-size: 12px;">ყველას მონიშვნა</label>
+        </div>
+        <div class="icons-wrp">
+  
+  
+          <button class="delete-button"><img src="assets/images/icons/msg.png"></button>
+          <button id="deleteSelected" class="delete-button"><img src="assets/images/icons/trash.png"></button>
+        </div>
+      </div>
+      <div id="messagesList" class="message-list">
+        <div *ngFor="let message of messages" class="little-info-wrap" routerLink="detail">
+          <input type="checkbox" class="message-checkbox" data-index="${index}"
+            [checked]="message.checked ? 'checked' : ''" (click)="$event.stopPropagation()">
+          <div class='little-info'>
+            <span class='text-link'>{{message.date}}</span>
+            <p class='heading-secondary'>{{message.title}}</p>
+            <p class='text-primary'>{{message.details}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

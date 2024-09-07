@@ -1,0 +1,48 @@
+.innerpage-text-container{
+    max-width: 790px;
+}
+
+.innerpage-text-wrapper{
+    max-width: 100%;
+}
+.little-text{
+    color: #000;
+}
+
+.text-link{
+    font-weight: 600;
+}
+
+/* .text-primary{
+    max-width: 405px;
+} */
+
+
+.shezgudva-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;    
+}
+.city-options{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.btn-secondary{
+    padding: 8px 12px;
+    border-radius: 18px;
+}
+
+@media screen and (max-width: 1024px)
+{
+    .container{
+        margin: 0;
+    }
+    .innerpage-container{
+        padding: 16px;
+    }
+
+    .places{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

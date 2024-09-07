@@ -1,0 +1,138 @@
+.popup-content {
+  max-width: 450px;
+}
+
+.popup-top {
+  width: 100%;
+  align-items: flex-start;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+}
+
+.form-group label {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.form-group input,
+.form-group select {
+  max-width: 100%;
+  width: 100%;
+}
+
+.popup-buttons {
+  width: 100%;
+}
+
+.popup-buttons button {
+  max-width: 100%;
+  width: 100%;
+}
+
+#popup-problem .popup-content {
+  max-width: 780px;
+  width: 100%;
+}
+
+#popup-problem .popup-content .popup-buttons {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#popup-problem .popup-content .popup-buttons .text-primary {
+  font-size: 12px;
+}
+
+#popup-problem .popup-content .popup-buttons .btn-primary {
+  max-width: 218px;
+}
+
+.error-border {
+  border: 1px solid red;
+}
+
+@media screen and (max-width: 1024px) {
+  #added-m {
+      display: none;
+  }
+  #added-m .status {
+      padding: 6px 12px;
+      width: fit-content;
+      background: rgba(99, 184, 102, 0.10);
+      border: 1px solid #57A35A;
+      color: #57A35A;
+  }
+  #popup-problem .popup-content .form-row {
+      flex-direction: column;
+      gap: 10px;
+  }
+  #popup-problem .popup-content .popup-buttons {
+      flex-direction: column;
+      align-items: center;
+  }
+  .table-container button {
+      width: 100%;
+      justify-content: center;
+  }
+  .popup-content {
+      max-width: 90% !important;
+      padding: 24px;
+      overflow: auto;
+      max-height: 600px;
+  }
+
+}
+
+
+.photos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.photo-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.uploaded {
+  border-radius: 6px;
+  position: relative;
+}
+
+.uploaded::after {
+  content: url('../../../../../assets/images/icons/close.png');
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+}

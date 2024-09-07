@@ -1,0 +1,153 @@
+
+#messages-popup .popup-content {
+  align-items: flex-start;
+  max-height: 587px;
+  max-width: 968px;
+  width: 100%;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
+}
+
+.checkbox-group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-right: 1px solid #e5e5e5;
+  padding-right: 15px;
+  gap: 8px;
+}
+
+.messages-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.messages-list li {
+  padding: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.messages-list li.active {
+  background-color: #f0f0f0;
+}
+
+.message-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 561px;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #E6E7E8;
+  background: #FFF;
+  padding: 20px;
+  box-shadow: 0px 4px 6px 0px rgba(198, 198, 198, 0.16);
+}
+
+.message-details h3 {
+  color: #0576BE;
+  text-align: center;
+  font-family: FiraGO;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.message-details h4 {
+  color: #000;
+  font-family: FiraGO;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.message-details p {
+  color: #696969;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.delete-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.messages-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 12px
+}
+
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 415px;
+  overflow-y: auto;
+}
+
+.little-info-wrap {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-bottom: 1px solid #E6E7E8;
+}
+
+.little-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.little-info .text-primary {
+  font-size: 12px;
+}
+
+.little-info .text-link {
+  line-height: normal;
+  font-size: 12px;
+}
+
+.little-info .heading-secondary {
+  font-size: 14px;
+}
+
+.icons-wrp {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

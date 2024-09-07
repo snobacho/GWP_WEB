@@ -1,0 +1,40 @@
+<div id="messages-popup" class="popup" style="display: flex;">
+  <div class="popup-content">
+    <img id="closePopupMessage" class="close-button" src="assets/images/icons/close.png" (click)="close()"/>
+
+    <p class="heading-secondary">შეტყობინებები</p>
+
+    <div class="messages-wrapper">
+      <div class="messages-list">
+        <div class="checkbox-group">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="selectAll">
+            <label for="selectAll" style="color: #696969; font-size: 12px;">ყველას მონიშვნა</label>
+          </div>
+          <div class="icons-wrp">
+
+
+            <button class="delete-button"><img src="assets/images/icons/msg.png"></button>
+            <button id="deleteSelected" class="delete-button"><img src="assets/images/icons/trash.png"></button>
+          </div>
+        </div>
+        <div id="messagesList" class="message-list">
+          <div *ngFor="let message of messages" class="little-info-wrap" (click)="choosedMessage = message">
+            <input type="checkbox" class="message-checkbox" data-index="${index}"
+              [checked]="message.checked ? 'checked' : ''">
+            <div class='little-info'>
+              <span class='text-link'>{{message.date}}</span>
+              <p class='heading-secondary'>{{message.title}}</p>
+              <p class='text-primary'>{{message.details}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="messageDetails" class="message-details">
+        <h3>{{choosedMessage.date}}</h3>
+        <h4>{{choosedMessage.title}}</h4>
+        <p>{{choosedMessage.details}}</p>
+      </div>
+    </div>
+  </div>
+</div>

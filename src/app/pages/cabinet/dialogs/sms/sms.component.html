@@ -1,0 +1,20 @@
+<div id="popup" class="popup" style="display: flex;">
+  <div class="popup-content">
+    <img id="closePopupSms" class="close-button" src="assets/images/icons/close.png" (click)="onClose()"/>
+    <div class="popup-top">
+      <h2 class="heading-secondary">შეიყვანეთ SMS კოდი</h2>
+      <p class="little-text">შეტყობინება გამოგზვნილია ნომერზე: <span class="little-text b"> +995 555 ****23
+        </span></p>
+    </div>
+    <div class="code-input-container">
+      <input type="password" maxlength="1" class="code-input" />
+      <input type="password" maxlength="1" class="code-input" />
+      <input type="password" maxlength="1" class="code-input" />
+      <input type="password" maxlength="1" class="code-input" />
+    </div>
+    <div class="popup-buttons">
+      <a class="text-link">ახალი SMS</a>
+      <button class="btn-primary" (click)="onClose()">დადასტურება</button>
+    </div>
+  </div>
+</div>

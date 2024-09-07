@@ -1,0 +1,622 @@
+@media only screen and (min-width: 1300px) {
+  .home-news-cards .home-news-card:nth-child(1) {
+      width: 626px;
+      position: relative;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, #000 77.05%) !important;
+      background-position: center;
+      background-size: 200px 100%;
+      border-radius: 12px;
+      overflow: hidden;
+  }
+  .home-news-cards .home-news-card:nth-child(1) img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  .home-news-card:nth-child(1)::before {
+      border-radius: 0 0 12px 12px;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 77.05%);
+  }
+  .home-news-cards .home-news-card:nth-child(1) .news-date,
+  .home-news-cards .home-news-card:nth-child(1) .home-news-text,
+  .home-news-cards .home-news-card:nth-child(1) .home-news-heading {
+      position: absolute;
+      left: 24px;
+      color: white;
+  }
+  .home-news-cards .home-news-card:nth-child(1) .news-date {
+      top: 203px;
+      color: #FFF;
+      font-size: 12px;
+      font-weight: 400;
+      width: auto;
+      background: none;
+      padding: 0;
+  }
+  .home-news-cards .home-news-card:nth-child(1) .home-news-heading {
+      padding: 0;
+      top: 219px;
+      max-width: 90%;
+      width: 447px;
+      color: #FFF;
+      font-size: 18px;
+      margin: 0;
+      font-weight: 700;
+      line-height: 26px;
+  }
+  .home-news-cards .home-news-card:nth-child(1) .home-news-text {
+      padding: 0;
+      top: 283px;
+      color: #D6D6D6;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      width: 476px;
+      max-width: 90%;
+  }
+}
+
+
+/* news page first different card on desktop  */
+
+
+/* start pagination-numbers  */
+
+#pagination-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+#pagination-numbers .arrow {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  border-radius: 4px;
+  font-weight: 600;
+  border: 1px solid #DFE3E8;
+}
+
+#pagination-numbers #page-numbers {
+  display: flex;
+  align-items: center;
+}
+
+#pagination-numbers .page {
+  background: transparent;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  line-height: 30px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  margin: 0 8px;
+  border-radius: 4px;
+  border: 1px solid #DFE3E8;
+  background: #FFF;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+#pagination-numbers .page.active {
+  border-radius: 4px;
+  border: 1px solid #0576BE;
+  background: white;
+  color: #0576BE;
+  ;
+}
+
+#pagination-numbers .page:hover {
+  background-color: #f0f0f0;
+}
+
+#pagination-numbers .dots {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  color: #212B36;
+  text-align: center;
+  border: 1px solid #DFE3E8;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.home-news {
+  margin: 0;
+}
+
+.innerpage-container {
+  margin-bottom: 40px;
+}
+
+.pagination-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagination-content #pagination-numbers {
+  display: flex !important;
+}
+
+
+/* end news pages first blog section  */
+
+
+/* planed-works  */
+
+.content * {
+  font-family: FiraGO;
+  font-style: normal;
+}
+
+.city-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.city-buttons .tab-button {
+  color: black;
+  background-color: white;
+  width: 105px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  color: #696969;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.city-buttons .tab-button.active {
+  border-radius: 18px;
+  border: 1px solid #0576BE;
+  background: #F1F6F9;
+  color: #0576BE;
+  width: 105px;
+  height: 36px;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 18px;
+}
+
+.choose-region {
+  width: 100%;
+  max-width: 306px;
+}
+
+.region-inside-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.region-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 48px;
+  border-radius: 10px;
+  border: 1px solid #E2E2E2;
+  background: #F9FAFB;
+  max-width: 624px;
+}
+
+.region-card h4 {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  max-width: 560px;
+}
+
+.region-card p {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 14px;
+  max-width: 560px;
+}
+
+.region-card div {
+  gap: 3px;
+}
+
+
+/* start tenders  */
+
+.tenders-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.tenders-card {
+  padding: 24px 16px;
+  border-radius: 10px;
+  border: 1px solid #E2E2E2;
+  width: 412px;
+}
+
+.tenders-card .tenders-head-text a {
+  max-width: 600px;
+}
+
+.tenders-card .tender-title {
+  margin-left: 21px;
+}
+
+.tenders-heading {
+  color: #000;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+
+.tenders-card .tender-card-info {
+  margin-top: 29px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tender-card-info p {
+  color: #000;
+  font-family: FiraGO;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.tender-card-info p>span {
+  color: #696969;
+}
+
+.tender-card-info p .date {
+  color: #F05422;
+}
+
+
+/* start documents section  */
+
+.documents {
+  max-width: 930px;
+}
+
+.documents .documents-heading {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 132%;
+  margin-bottom: 16px;
+}
+
+.documents .pdf-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 600;
+}
+
+
+/* start careers page  */
+
+.career-content * {
+  font-family: FiraGO;
+  font-style: normal;
+}
+
+.career-content-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.career-content {
+  width: 100%;
+  max-width: 412px;
+  height: 227px;
+  border-radius: 10px;
+  border: 1px solid #E2E2E2;
+  cursor: pointer;
+}
+
+.career-content .career-card-head {
+  padding: 16px 16px 24px 16px;
+  border-bottom: 1px solid #E2E2E2;
+  ;
+}
+
+.career-card-head h3 {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.career-card-body {
+  padding: 16px 16px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #000;
+  font-family: FiraGO;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.career-card-body span {
+  color: #696969;
+}
+
+.active-date .date {
+  color: #F05422;
+  font-weight: 600;
+}
+
+.career-card-body div {
+  gap: 3px;
+}
+
+.career-popup-body {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  max-width: 723px;
+  padding: 16px 84px 32px 32px;
+}
+
+.list-heading {
+  color: #000;
+  font-weight: 600;
+}
+
+.career-popup-body>p {
+  margin-top: 12px;
+}
+
+.career-popup-body li {
+  list-style-type: disc;
+  margin-left: 16px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.50);
+}
+
+
+/* Modal Content */
+
+.modal-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px solid #888;
+  width: 100%;
+  max-width: 841px;
+  height: 712px;
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+
+/* Close button */
+
+.modal-content .close {
+  float: right;
+  margin-top: 22px;
+  margin-right: 22px;
+}
+
+@media (max-width: 1300px) {
+  #content1 .home-news-cards {
+      gap: 17px;
+  }
+  #content1 .home-news-card {
+      margin: 0 auto;
+      height: auto;
+      padding-bottom: 16px;
+  }
+  #content1 .home-news-card img {
+      height: 141px;
+  }
+  #content1 .home-news-card .news-date {
+      top: 126px;
+  }
+  .home-news-card .home-news-heading {
+      font-size: 15px;
+  }
+  /* planed works  */
+  .planned-works {
+      padding: 0 16px;
+  }
+  .choose-region {
+      max-width: 100%;
+  }
+  .city-buttons {
+      gap: 0;
+      justify-content: space-between;
+  }
+  .region-inside-wrap {
+      gap: 12px;
+  }
+  .region-inside-wrap .region-card {
+      padding: 16px;
+  }
+  .region-card p {
+      color: #696969;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      margin-top: 4px;
+  }
+  .region-card h4 {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px
+  }
+  .region-card div img {
+      display: none;
+  }
+  /* tenders  */
+  .tenders {
+      padding: 0 16px;
+  }
+  .tenders-cards {
+      gap: 12px;
+  }
+  .tenders-card {
+      max-width: 412px;
+      width: 100%;
+  }
+  .tenders-head-text,
+  .tenders-heading {
+      font-size: 13px;
+  }
+  .tenders-heading {
+      margin-bottom: 12px;
+  }
+  .tenders-card .tender-title {
+      font-size: 12px;
+      margin-left: 5px;
+  }
+  .tenders-card .tender-card-info {
+      margin-top: 12px;
+  }
+  /* documents  */
+  .documents {
+      padding: 0 16px;
+  }
+  .documents .documents-heading {
+      font-size: 14px;
+      margin-bottom: 8px;
+  }
+  .documents .pdf-buttons {
+      gap: 12px;
+      width: 100%;
+  }
+  .btn-pdf {
+      width: 100%;
+      max-width: 400px;
+  }
+  .documents p {
+      font-size: 13px;
+  }
+  .tenders-card .tender-card-info {
+      gap: 8px;
+  }
+  .tender-card-info p {
+      font-size: 12px;
+  }
+  .innerpage-container {
+      margin-bottom: 48px;
+      padding-bottom: 0;
+      padding-top: 16px;
+  }
+  /* career  */
+  .career-content {
+      height: auto;
+  }
+  .career-card-head h3 {
+      font-size: 12px;
+      line-height: 18px
+  }
+  .career-content .career-card-head {
+      padding: 0;
+      border: none;
+      margin-bottom: 28px;
+  }
+  .career-content .career-card-head img {
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+  }
+  .career-card-body {
+      padding: 0;
+  }
+  .career-content {
+      padding: 16px;
+  }
+  .career-card-body img {
+      width: 20px;
+      height: 20px;
+  }
+  .career-card-body p,
+  .career-card-body div {
+      color: #696969;
+      font-size: 12px;
+  }
+}
+
+.career-mobile-page {
+  padding: 16px;
+  margin-bottom: 16px;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.career-mobile-page h3 {
+  color: #000;
+  font-family: FiraGO;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.career-mobile-page li {
+  list-style: disc;
+}
+
+.career-mobile-page ul {
+  padding-left: 18px;
+}
+
+.career-mobile-page h5 {
+  margin-top: 10px;
+}
+
+.career-mobile-page .text-primary {
+  font-size: 12px;
+}
