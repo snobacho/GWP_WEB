@@ -129,3 +129,10 @@ footer .first-f-item {
       display: block;
   }
 }
+
+@media (max-width: 1300px) and (min-width: 1050px) {
+ footer {
+  padding-left: 15px;
+  padding-right: 15px;
+ }
+}

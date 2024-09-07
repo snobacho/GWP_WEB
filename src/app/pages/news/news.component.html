@@ -209,11 +209,14 @@
 
       <div id="pagination-numbers">
         <span class="arrow left" id="prev">&lt;</span>
-        <div id="page-numbers"></div>
+        <div id="page-numbers">
+          <span class="page active" data-page="1">1</span>
+          <span class="page" data-page="2">2</span>
+          <span class="dots">...</span>
+          <span class="page" data-page="20">20</span></div>
         <span class="arrow right" id="next">&gt;</span>
       </div>
     </div>
-    <!-- total pagination numbers is in news-pagination.js -->
     <!-- end first news (blog pagination) section   -->
 
     <!-- planned-works -->
@@ -657,7 +660,30 @@
     <!-- start career content  -->
     <div id="content7" class="content flex-container" *ngIf="openedTab == 7">
       <div class="career-content-wrap">
-        <div class="career-content" data-career-id="1">
+        <div class="career-content" data-career-id="1" (click)="openCareer()">
+          <div class="career-card-head align-center">
+            <img src="assets/images/icons/career.png" alt="" />
+            <img src="assets/images/icons/career.png" alt="" />
+            <h3>
+              სასაწყობე მეურნეობის სამსახურში, საწყობის ოპერატორის პოზიცია
+            </h3>
+          </div>
+          <div class="career-card-body">
+            <div class="align-center">
+              <img src="assets/images/icons/clock.svg" alt="" />
+              <p>სრული განაკვეთი</p>
+            </div>
+            <div class="align-center">
+              <img src="assets/images/icons/MapPin.svg" alt="" />ოფისიდან
+            </div>
+            <p class="active-date mt-8">
+              <span>აქტიურია:</span> 27.05.2024-დან
+              <span class="date">30.06.2024-მდე</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="career-content" data-career-id="2" (click)="openCareer()">
           <div class="career-card-head align-center">
             <img src="assets/images/icons/career.png" alt="" />
             <h3>
@@ -679,7 +705,7 @@
           </div>
         </div>
 
-        <div class="career-content" data-career-id="2">
+        <div class="career-content" data-career-id="3" (click)="openCareer()">
           <div class="career-card-head align-center">
             <img src="assets/images/icons/career.png" alt="" />
             <h3>
@@ -701,7 +727,7 @@
           </div>
         </div>
 
-        <div class="career-content" data-career-id="3">
+        <div class="career-content" data-career-id="4" (click)="openCareer()">
           <div class="career-card-head align-center">
             <img src="assets/images/icons/career.png" alt="" />
             <h3>
@@ -723,7 +749,7 @@
           </div>
         </div>
 
-        <div class="career-content" data-career-id="4">
+        <div class="career-content" data-career-id="5" (click)="openCareer()">
           <div class="career-card-head align-center">
             <img src="assets/images/icons/career.png" alt="" />
             <h3>
@@ -745,7 +771,7 @@
           </div>
         </div>
 
-        <div class="career-content" data-career-id="5">
+        <div class="career-content" data-career-id="6" (click)="openCareer()">
           <div class="career-card-head align-center">
             <img src="assets/images/icons/career.png" alt="" />
             <h3>
@@ -766,108 +792,6 @@
             </p>
           </div>
         </div>
-
-        <div class="career-content" data-career-id="6">
-          <div class="career-card-head align-center">
-            <img src="assets/images/icons/career.png" alt="" />
-            <h3>
-              სასაწყობე მეურნეობის სამსახურში, საწყობის ოპერატორის პოზიცია
-            </h3>
-          </div>
-          <div class="career-card-body">
-            <div class="align-center">
-              <img src="assets/images/icons/clock.svg" alt="" />
-              <p>სრული განაკვეთი</p>
-            </div>
-            <div class="align-center">
-              <img src="assets/images/icons/MapPin.svg" alt="" />ოფისიდან
-            </div>
-            <p class="active-date mt-8">
-              <span>აქტიურია:</span> 27.05.2024-დან
-              <span class="date">30.06.2024-მდე</span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- end career content  -->
-
-      <!-- Popup Modal -->
-      <div id="careerModal" class="modal">
-        <div class="modal-content">
-          <span class="close"
-            ><img src="assets/images/icons/close-modal.png" alt=""
-          /></span>
-          <div id="modal-body"></div>
-        </div>
-      </div>
-
-      <!-- Careers popup inside contents -->
-      <div class="career-detail" id="career-1-content" style="display: none">
-        <div class="career-popup-body">
-          <img class="gwp-logo" src="assets/images/GWP-LOGO.png" alt="" />
-          <h3 class="career-popup-heading">
-            ახალი მიერთების და რეაბილიტაციის სამსახურში, მუშა/ზეინკლის პოზიცია
-          </h3>
-          <p class="text-primary">
-            ჯორჯიან უოთერ ენდ ფაუერი  აცხადებს ვაკანსიას ახალი მიერთების და
-            რეაბილიტაციის სამსახურში, მუშა/ზეინკლის პოზიციაზე.
-          </p>
-          <ul>
-            <h5 class="list-heading mt-16">პასუხისმგებლობა/მოვალეობები:</h5>
-            <li class="text-primary">პასუხისმგებლობა/მოვალეობები:</li>
-            <li class="text-primary">
-              გრუნტის დამუშავება, მიწის გათხრითი სამუშაოების წარმოება და
-              განათხარის ქვიშა-ხრეშოვანი ნარევით შევსება;
-            </li>
-            <li class="text-primary">პასუხისმგებლობა/მოვალეობები:</li>
-            <li class="text-primary">
-              გრუნტის დამუშავება, მიწის გათხრითი სამუშაოების წარმოება და
-              განათხარის ქვიშა-ხრეშოვანი ნარევით შევსება;
-            </li>
-            <li class="text-primary">პასუხისმგებლობა/მოვალეობები:</li>
-            <li class="text-primary">
-              გრუნტის დამუშავება, მიწის გათხრითი სამუშაოების წარმოება და
-              განათხარის ქვიშა-ხრეშოვანი ნარევით შევსება;
-            </li>
-          </ul>
-          <p class="text-primary">
-            ჯორჯიან უოთერ ენდ ფაუერი  აცხადებს ვაკანსიას ახალი მიერთების და
-            რეაბილიტაციის სამსახურში, მუშა/ზეინკლის პოზიციაზე.
-          </p>
-          <ul>
-            <h5 class="list-heading mt-16">პასუხისმგებლობა/მოვალეობები:</h5>
-            <li class="text-primary">პასუხისმგებლობა/მოვალეობები:</li>
-            <li class="text-primary">
-              გრუნტის დამუშავება, მიწის გათხრითი სამუშაოების წარმოება და
-              განათხარის ქვიშა-ხრეშოვანი ნარევით შევსება;
-            </li>
-            <li class="text-primary">პასუხისმგებლობა/მოვალეობები:</li>
-            <li class="text-primary">
-              გრუნტის დამუშავება, მიწის გათხრითი სამუშაოების წარმოება და
-              განათხარის ქვიშა-ხრეშოვანი ნარევით შევსება;
-            </li>
-            <li class="text-primary">პასუხისმგებლობა/მოვალეობები:</li>
-            <li class="text-primary">
-              გრუნტის დამუშავება, მიწის გათხრითი სამუშაოების წარმოება და
-              განათხარის ქვიშა-ხრეშოვანი ნარევით შევსება;
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="career-detail" id="career-2-content" style="display: none">
-        <h2>career 2</h2>
-      </div>
-      <div class="career-detail" id="career-3-content" style="display: none">
-        <h2>career 3</h2>
-      </div>
-      <div class="career-detail" id="career-4-content" style="display: none">
-        <h2>career 4</h2>
-      </div>
-      <div class="career-detail" id="career-5-content" style="display: none">
-        <h2>career 5</h2>
-      </div>
-      <div class="career-detail" id="career-6-content" style="display: none">
-        <h2>career 6</h2>
       </div>
     </div>
 

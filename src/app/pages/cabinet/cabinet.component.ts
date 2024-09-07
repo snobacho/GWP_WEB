@@ -21,22 +21,34 @@ export class CabinetComponent {
   problemAdded = false
   private dialog = inject(MatDialog)
   openRowPopup(){
-    const dialog = this.dialog.open(AddRowComponent)
+    const dialog = this.dialog.open(AddRowComponent, {
+      width: '450px'
+    })
   }
 
   openChvenebaPopup(): void {
-    const dialog = this.dialog.open(ChvenebaComponent)
+    const dialog = this.dialog.open(ChvenebaComponent, {
+      width: '450px'
+    })
   }
 
   openProblemPopup(): void {
-    const dialog = this.dialog.open(ProblemComponent)
+    const dialog = this.dialog.open(ProblemComponent, {
+      width: '780px',
+      maxWidth: '90vw',
+      maxHeight: '90vh',    
+    })
     dialog.componentInstance.addProblem.subscribe((value: boolean) => {
       this.problemAdded = value
     })
   }
 
   openDetailsPopup(){
-    const dialog = this.dialog.open(DetailsComponent)
+    const dialog = this.dialog.open(DetailsComponent, {
+      width: '920px',
+      maxWidth: '90vw',
+      maxHeight: '90vh',    
+    })
   
   }
 }

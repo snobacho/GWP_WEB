@@ -1,4 +1,4 @@
-<div id="popup" class="popup" style="display: flex;">
+<div id="popup" style="display: flex;">
   <div class="popup-content">
     <img id="closePopupSms" class="close-button" src="assets/images/icons/close.png" (click)="onClose()"/>
     <div class="popup-top">
@@ -7,10 +7,10 @@
         </span></p>
     </div>
     <div class="code-input-container">
-      <input type="password" maxlength="1" class="code-input" />
-      <input type="password" maxlength="1" class="code-input" />
-      <input type="password" maxlength="1" class="code-input" />
-      <input type="password" maxlength="1" class="code-input" />
+      <input type="password" maxlength="1" class="code-input" #codeInput1 (input)="moveToNext(codeInput1, codeInput2)" (keyup.backspace)="moveToPrev(codeInput1, null)" />
+      <input type="password" maxlength="1" class="code-input" #codeInput2 (input)="moveToNext(codeInput2, codeInput3)" (keyup.backspace)="moveToPrev(codeInput2, codeInput1)" />
+      <input type="password" maxlength="1" class="code-input" #codeInput3 (input)="moveToNext(codeInput3, codeInput4)" (keyup.backspace)="moveToPrev(codeInput3, codeInput2)" />
+      <input type="password" maxlength="1" class="code-input" #codeInput4 (keyup.backspace)="moveToPrev(codeInput4, codeInput3)" />
     </div>
     <div class="popup-buttons">
       <a class="text-link">ახალი SMS</a>

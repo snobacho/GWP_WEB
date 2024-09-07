@@ -541,3 +541,9 @@
         display: none;
     }
 }
+
+@media (min-width: 365px) { 
+    .home-main-right-link {
+        width: 100%;
+    }
+}

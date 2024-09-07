@@ -543,3 +543,35 @@
       display: none;
   }
 }
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: auto; /* Allow slide to take only as much space as its content */
+  flex-shrink: 0; /* Prevent the slides from shrinking to fit the container */
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 365px) { 
+  .home-main-right .home-main-right-link, .home-fast-links .home-fast-links-secton a {
+      width: 100% !important;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .home-fast-links-secton a {
+      width: 100%;
+      height: 77px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .home-fast-links-secton a br {
+    display: none !important;
+}
+}

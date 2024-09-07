@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MessagesComponent } from '../../pages/cabinet/dialogs/messages/messages.component';
@@ -13,7 +13,7 @@ import { MessagesComponent } from '../../pages/cabinet/dialogs/messages/messages
 })
 export class HeaderComponent {
   menuOpened = false
-  loggedIn = false
+  loggedIn = true
   private dialog = inject(MatDialog)
   openMessages(){
     console.log(2);

@@ -1,48 +1,51 @@
-<div id="popup-problem" class="popup" style="display: flex;">
-  <div class="popup-content">
-    <img id="closePopupProblem" class="close-button" src="assets/images/icons/close.png" (click)="onClose()" />
-    <div class="popup-top">
-      <p class="heading-secondary">პრობლემის დაფიქსირება</p>
-    </div>
-    <div class="form-row">
+<mat-dialog-content>
+  <div id="popup-problem" style="display: flex;">
+    <div class="popup-content">
+      <img id="closePopupProblem" class="close-button" src="assets/images/icons/close.png" mat-dialog-close=""/>
+      <div class="popup-top">
+        <p class="heading-secondary">პრობლემის დაფიქსირება</p>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>პრობლემა</label>
+          <select>
+            <option value="დაზიანებულია წყლის მილი">დაზიანებულია წყლის მილი</option>
+            <option value="დაზიანებულია წყლის მილი">დაზიანებულია წყლის მილი</option>
+            <option value="დაზიანებულია წყლის მილი">დაზიანებულია წყლის მილი</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>მისამართი</label>
+          <input type="text" id="address-problem" [(ngModel)]="addressProblem" (input)="validateForm()" 
+                 placeholder="მიუთითეთ მისამართი" 
+                 [class.error-border]="isInvalidAddress" />
+          <p class="text-primary" *ngIf="isInvalidAddress" style="font-size: 12px;">მისამართი სავალდებულოა</p>
+        </div>
+      </div>
+  
       <div class="form-group">
-        <label>პრობლემა</label>
-        <select>
-          <option value="დაზიანებულია წყლის მილი">დაზიანებულია წყლის მილი</option>
-          <option value="დაზიანებულია წყლის მილი">დაზიანებულია წყლის მილი</option>
-          <option value="დაზიანებულია წყლის მილი">დაზიანებულია წყლის მილი</option>
-        </select>
+        <label>კომენტარი</label>
+        <input type="text" style="height: 105px;" id="comment" placeholder="დაწერეთ კომენტარი" />
       </div>
-      <div class="form-group">
-        <label>მისამართი</label>
-        <input type="text" id="address-problem" [(ngModel)]="addressProblem" (input)="validateForm()" 
-               placeholder="მიუთითეთ მისამართი" 
-               [class.error-border]="isInvalidAddress" />
-        <p class="text-primary" *ngIf="isInvalidAddress" style="font-size: 12px;">მისამართი სავალდებულოა</p>
+  
+      <div id="photos-container" class="photos-container" *ngIf="uploadPhoto">
+        <p class="text-primary">ატვირთული ფოტომასალა ხელმისაწვდომი იქნება 90 დღის განმავლობაში</p>
+        <div class="photo-content">
+          <img src="assets/images/up1.png" class="uploaded">
+          <img src="assets/images/up2.png" class="uploaded">
+        </div>
       </div>
-    </div>
-
-    <div class="form-group">
-      <label>კომენტარი</label>
-      <input type="text" style="height: 105px;" id="comment" placeholder="დაწერეთ კომენტარი" />
-    </div>
-
-    <div id="photos-container" class="photos-container" *ngIf="uploadPhoto">
-      <p class="text-primary">ატვირთული ფოტომასალა ხელმისაწვდომი იქნება 90 დღის განმავლობაში</p>
-      <div class="photo-content">
-        <img src="assets/images/up1.png" class="uploaded">
-        <img src="assets/images/up2.png" class="uploaded">
+  
+      <div class="popup-buttons">
+        <div class="info-wrp"><img src="assets/images/icons/info.png">
+          <p class="text-primary">ფოტომასალა უნდა იყოს .JPG ფორმატში</p>
+        </div>
+        <div id="upload" class="info-wrp"><img src="assets/images/icons/upload.png" (click)="uploadPhoto = true"> 
+          <p class="text-link">ფოტოს ატვირთვა</p>
+        </div>
+        <button id="submitBtn-p" (click)="addProblem.emit(true)" mat-dialog-close class="btn-primary" [disabled]="isSubmitDisabled">დადასტურება</button>
       </div>
-    </div>
-
-    <div class="popup-buttons">
-      <div class="info-wrp"><img src="assets/images/icons/info.png">
-        <p class="text-primary">ფოტომასალა უნდა იყოს .JPG ფორმატში</p>
-      </div>
-      <div id="upload" class="info-wrp"><img src="assets/images/icons/upload.png" (click)="uploadPhoto = true"> 
-        <p class="text-link">ფოტოს ატვირთვა</p>
-      </div>
-      <button id="submitBtn-p" (click)="addProblem.emit(true); onClose()" class="btn-primary" [disabled]="isSubmitDisabled">დადასტურება</button>
     </div>
   </div>
-</div>
+</mat-dialog-content>
+

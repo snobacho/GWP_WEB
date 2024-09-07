@@ -15,4 +15,16 @@ export class SmsComponent {
   onClose(): void {
     this.dialogRef.close();
   }
+
+  moveToNext(currentInput: HTMLInputElement, nextInput: HTMLInputElement | null): void {
+    if (currentInput.value.length === currentInput.maxLength && nextInput) {
+      nextInput.focus();
+    }
+  }
+
+  moveToPrev(currentInput: HTMLInputElement, prevInput: HTMLInputElement | null): void {
+    if (prevInput && currentInput.value.length === 0) {
+      prevInput.focus();
+    }
+  }
 }

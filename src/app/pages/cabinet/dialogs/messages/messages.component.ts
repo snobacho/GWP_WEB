@@ -62,4 +62,11 @@ export class MessagesComponent {
   close(){
     this.dialogRef.close()
   }
+
+  toggleAllCheckboxes(event: Event) {
+    const isChecked = (event.target as HTMLInputElement).checked;
+    this.messages.forEach(message => {
+      message.checked = isChecked;
+    });
+  }
 }

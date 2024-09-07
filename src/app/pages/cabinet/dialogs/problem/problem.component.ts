@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-problem',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MatDialogModule],
   templateUrl: './problem.component.html',
   styleUrl: './problem.component.css'
 })
@@ -22,10 +22,5 @@ export class ProblemComponent {
   validateForm() {
     this.isInvalidAddress = this.addressProblem.trim().length === 0;
     this.isSubmitDisabled = this.isInvalidAddress;
-  }
-
-
-  onClose(): void {
-    this.dialogRef.close();
   }
 }

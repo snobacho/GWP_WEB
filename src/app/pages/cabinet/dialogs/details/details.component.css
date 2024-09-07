@@ -1,7 +1,5 @@
 .popup-content {
-  max-width: 450px;
   overflow: auto;
-  max-height: 600px;
 }
 
 .popup-top {
@@ -50,7 +48,6 @@
 }
 #popup-details .popup-content {
   max-width: unset;
-  width: auto;
 }
 
 .signup-wrap * {
@@ -177,7 +174,6 @@
       padding: 0;
   }
   .popup-content {
-      max-width: 90% !important;
       padding: 24px;
   }
 }

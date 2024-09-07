@@ -1,0 +1,64 @@
+.career-popup-body {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  max-width: 723px;
+}
+
+.list-heading {
+  color: #000;
+  font-weight: 600;
+}
+
+.career-popup-body>p {
+  margin-top: 12px;
+}
+
+.career-popup-body li {
+  list-style-type: disc;
+  margin-left: 16px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.50);
+}
+
+
+/* Modal Content */
+
+.modal-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px solid #888;
+  width: 100%;
+  max-width: 841px;
+  height: 712px;
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+
+/* Close button */
+
+.career-popup-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close{
+  cursor: pointer;
+}

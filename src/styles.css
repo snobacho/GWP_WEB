@@ -695,7 +695,6 @@ a, button {
         padding: 0 16px;
     }
     .popup-content {
-        max-width: 90% !important;
         padding: 24px;
     }
 
@@ -713,3 +712,11 @@ input[type="checkbox"] {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-dialog-content{
+    max-height: none !important;
+}
+
+.mat-mdc-dialog-container .mat-mdc-dialog-content{
+    padding: 0 !important;
+}

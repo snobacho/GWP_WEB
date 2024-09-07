@@ -34,7 +34,7 @@
   </p>
 
   <!-- home news and inside news pages bottom content is similar -->
-  <div class="home-news">
+  <div class="home home-news">
     <div class="home-news-head">
       <h3>სიახლეები</h3>
       <a href="#">ყველას ნახვა</a>
@@ -99,62 +99,50 @@
     <h3>სიახლეები</h3>
     <a href="#">ყველას ნახვა</a>
   </div>
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <div class="home-news-card">
-        <img src="assets/images/home-imgs/home-news.png" alt="" />
-        <div class="news-date center">25.11.2024</div>
-        <h4 class="home-news-heading">
-          ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
-        </h4>
-        <p class="home-news-text">
-          დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
-          მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე დაზიანების 
-          აღსადგენად სამუშაოებს ატარებს.
-        </p>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="home-news-card">
-        <img src="assets/images/home-imgs/home-news.png" alt="" />
-        <div class="news-date center">25.11.2024</div>
-        <h4 class="home-news-heading">
-          ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
-        </h4>
-        <p class="home-news-text">
-          დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
-          მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე დაზიანების 
-          აღსადგენად სამუშაოებს ატარებს.
-        </p>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="home-news-card">
-        <img src="assets/images/home-imgs/home-news.png" alt="" />
-        <div class="news-date center">25.11.2024</div>
-        <h4 class="home-news-heading">
-          ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
-        </h4>
-        <p class="home-news-text">
-          დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
-          მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე დაზიანების 
-          აღსადგენად სამუშაოებს ატარებს.
-        </p>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="home-news-card">
-        <img src="assets/images/home-imgs/home-news.png" alt="" />
-        <div class="news-date center">25.11.2024</div>
-        <h4 class="home-news-heading">
-          ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება
-        </h4>
-        <p class="home-news-text">
-          დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5
-          მიკრორაიონის N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე დაზიანების 
-          აღსადგენად სამუშაოებს ატარებს.
-        </p>
-      </div>
-    </div>
-  </div>
+  <swiper-container [breakpoints]="breakpoints" loop="true">
+    <swiper-slide >
+        <div class="swiper-slide" routerLink="/about-us/detail"> 
+            <div class="home-news-card">
+                <img src="assets/images/home-imgs/home-news.png" alt="">
+                <div class="news-date center">25.11.2024</div>
+                <h4 class="home-news-heading">ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება</h4>
+                <p class="home-news-text">დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5 მიკრორაიონის
+                    N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე დაზიანების  აღსადგენად სამუშაოებს ატარებს.</p>
+            </div>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <div class="swiper-slide" routerLink="/about-us/detail">
+            <div class="home-news-card">
+                <img src="assets/images/home-imgs/home-news.png" alt="">
+                <div class="news-date center">25.11.2024</div>
+                <h4 class="home-news-heading">ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება</h4>
+                <p class="home-news-text">დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5 მიკრორაიონის
+                    N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე დაზიანების  აღსადგენად სამუშაოებს ატარებს.</p>
+            </div>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <div class="swiper-slide" routerLink="/about-us/detail">
+            <div class="home-news-card">
+                <img src="assets/images/home-imgs/home-news.png" alt="">
+                <div class="news-date center">25.11.2024</div>
+                <h4 class="home-news-heading">ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება</h4>
+                <p class="home-news-text">დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5 მიკრორაიონის
+                    N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე დაზიანების  აღსადგენად სამუშაოებს ატარებს.</p>
+            </div>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <div class="swiper-slide" routerLink="/about-us/detail">
+            <div class="home-news-card">
+                <img src="assets/images/home-imgs/home-news.png" alt="">
+                <div class="news-date center">25.11.2024</div>
+                <h4 class="home-news-heading">ჯორჯიან უოთერ ენდ ფაუერის სპეციალური განცხადება</h4>
+                <p class="home-news-text">დღეს, 25 ოქტომბერს, ჯორჯიან უოთერ ენდ ფაუერი ნუცუბიძის მე-5 მიკრორაიონის
+                    N9ა კორპუსის მიმდებარედ წყალსადენის ქსელზე დაზიანების  აღსადგენად სამუშაოებს ატარებს.</p>
+            </div>
+        </div>
+    </swiper-slide>
+</swiper-container>
 </div>

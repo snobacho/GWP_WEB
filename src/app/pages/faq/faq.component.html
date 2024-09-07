@@ -3,7 +3,7 @@
         <h3 class="faq-title">დისტანციური მომსახურება</h3>
         <p class="faq-title-desc">გთხოვთ, შეავსეთ თქვენი საკითხის შესაბამისი განცხადების ფორმა და გამოაგზავნეთ კომპანიის ელექტრონულ ფოსტაზე - online&#64;gwp.ge</p>
     </div>
-  
+
     <div *ngFor="let faq of faqs" class="faq-item" [ngClass]="{'active': faq.expanded}">
         <div class="faq-head-wrap" (click)="toggleFAQ(faq)">
             <h4 class="faq-heading">{{ faq.heading }}</h4>
@@ -13,5 +13,5 @@
             <p>{{ faq.content }}</p>
         </div>
     </div>
-  </div>
+</div>
   

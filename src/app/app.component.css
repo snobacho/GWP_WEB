@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app {
+  flex: 1;
+}
+
+/* Footer should always be at the bottom */
+app-footer {
+  margin-top: auto;
+}
